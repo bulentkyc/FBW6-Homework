@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Background Styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <script src=""></script>
+    <style>
+        body {
+            width: 100%;
+            background-color: rgb(209, 201, 201);
+            padding: 0px;
+            margin: 0px;
+        }
+        div {
+            width: 60%;
+            margin-left: 20%;
+            height: 400px;
+            border: 30px solid rgba(168, 12, 168, 0.4);
+        }
+        div p {
+            color: white;
+            width: 60%;
+            margin-left: 30%;
+            padding-top: 5%;
+        }
+        .expand {
+            height: 600px;
+            width: 100%;
+            border: none;
+            margin: 0px;
+            font-size: 30px;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        .blue-bg {
+            background-color: blue
+        }
+        .hex-fav-bg {
+            background-color: #2E4053;
+        }
+        .rgb-fav-bg {
+            background-color: rgb(175, 122, 197);
+        }
+        .red-ball {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(211, 82, 115);
+            border-radius: 50%;
+            margin: 25px;
+        }
+        .red-ball {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(211, 82, 115);
+            border-radius: 50%;
+            margin: 25px;
+        }
+        .transparent-bg {
+            border: 2px solid purple;
+            /* background-color: rgb(175, 122, 197, 0); transparent */
+        }
+        .image-bg {
+            background-image: url('http://lorempixel.com/200/200/cats');
+        }
+        .computer-image-bg {
+            background-image: url("../student info table/3-104.jpg");
+        }
+        .img-bg-gradient {
+            background-image: linear-gradient(rgb(34, 83, 75), rgb(255, 251, 0), rgb(234, 0, 255));
+            display: flex;
+            flex-direction: row;
+        }
+        .gradient-ball {
+            /* position: absolute; */
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            background-image: linear-gradient(black, red, gold);
+            border-radius: 50%;
+            margin: 10px;
+        }
+        .img-bg-gradient-tr {
+            background-image: linear-gradient(to right, rgb(34, 83, 75), rgb(255, 251, 0), rgb(234, 0, 255));
+        }
+        .img-bg-gradient-trb {
+            background-image: linear-gradient(to right bottom, rgb(34, 83, 75), rgb(255, 251, 0), rgb(234, 0, 255));
+        }
+        .img-bg-gradient-40deg {
+            background-image: linear-gradient(40deg, rgb(34, 83, 75), rgb(255, 251, 0), rgb(234, 0, 255));
+        }
+        .img-bg-gradient-0deg {
+            background-image: linear-gradient(0deg, rgb(34, 83, 75), rgb(255, 251, 0), rgb(234, 0, 255));
+        }
+        .img-bg-gradient-rainbow {
+            background-image: linear-gradient(to right, violet 10%, indigo 10%, green, blue, yellow, orange, red);
+        }
+        .img-bg-gradient-rad-gra {
+            background-image: repeating-radial-gradient(violet, indigo, green, blue, yellow, orange, red);
+        }
+        .img-bg-gra-wei {
+            background-image: repeating-radial-gradient(violet 60%, indigo, green 10%, blue, yellow, orange, red);
+        }
+        .img-bg-gra-circle {
+            background-image: repeating-radial-gradient(circle, violet 10%, indigo 20%, green 20%, blue 30%, yellow, orange, red);
+        }
+        .img-bg-gra-origin {
+            background-image: radial-gradient(closest-side at 80% 40%, violet 10%, indigo 20%, rgb(0, 68, 255));
+        }
+        .img-bg-gra-origin2 {
+            background-image: radial-gradient(farthest-side at 80% 40%, violet 10%, indigo 20%, green 20%, blue 30%, yellow, orange, red);
+        }
+        .img-bg-gra-cc {
+            background-image: radial-gradient(closest-corner at 80% 40%, violet 10%, indigo 20%, green 20%, blue 30%, yellow, orange, red);
+        }
+        .img-bg-rad-repeating {
+            background-image: repeating-radial-gradient(violet 10%, indigo 20%);
+        }
+        .img-bg-lin-repeating {
+            background-image: repeating-linear-gradient(violet 10%, indigo 20%, rgb(32, 51, 32) 20%, blue 30%, yellow, orange, red);
+        }
+        .img-bg-web {
+            background-image: url('http://lorempixel.com/300/300/cats');
+        }
+        .fixed {
+            background-attachment: fixed;
+        }
+        .scroll {
+            background-attachment: scroll;
+            overflow: hidden;
+            /* default setting */
+        }
+        .local {
+            background-attachment: local;
+            overflow: scroll;
+            /* overflow-y: scroll;
+            overflow-x: hidden; */
+        }
+        .bg-clip-bb {
+            background-clip: border-box;
+        }
+        .bg-clip-pb {
+            background-clip: padding-box;
+        }
+        .bg-clip-cb {
+            padding: 10px;
+            background-clip: content-box;
+        }
+        .bg-origin-bb {
+            background-origin: border-box;
+            background-repeat: no-repeat;
+        }
+        .bg-origin-pb {
+            background-origin: padding-box;
+            background-repeat: no-repeat;
+        }
+        .bg-origin-cb {
+            padding: 10px;
+            background-origin: content-box;
+            background-repeat: no-repeat;
+        }
+        .bg-acqua {
+            background-color: rgb(94, 155, 170);
+        }
+        .bg-repeat-no {
+            background-repeat: no-repeat;
+        }
+        .bg-repeat-x {
+            background-repeat: repeat-x;
+        }
+        .bg-repeat-y {
+            background-repeat: repeat-y;
+            overflow-y: scroll;
+        }
+        .bg-repeat-space {
+            background-repeat: space;
+        }
+        .bg-repeat-round {
+            background-repeat: round;
+        }
+        .bg-ps-dr {
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+        .bg-ps-pc {
+            background-repeat: no-repeat;
+            background-position: 30% 70%;
+        }
+        .bg-ps-num {
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+        }
+        /* div {
+            width: 50%;
+            margin-left: 20%;
+            height: 400px;
+            border: 100px solid rgba(238, 243, 241, 0.1);
+            border-image: repeating-linear-gradient(45deg, rgb(104, 184, 93) 10%, white 15%);
+        } */
+        .two-imgs {
+            background-origin: border-box;
+            border: none;
+        }
+        .expand2 {
+            height: 400px;
+            margin-left: 20%;
+            background-origin: border-box;
+            width: 60%;
+            padding: 0px;
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+            background-image: url('http://lorempixel.com/450/100/cats'), url('http://lorempixel.com/450/100/cats');
+            /* border-image: linear-gradient(30deg, red 5%, yellow 10%, green 15%, transparent); */
+            /* border-image: repeating-linear-gradient(-30deg, rgba(21, 255, 0, 0.8), rgba(0, 0, 255, .8) 5px, transparent 6px, transparent 10px, rgba(236, 222, 18, 0.8) 11px, rgba(255, 0, 0, .8) 15px, transparent 16px, transparent 20px) 12/10px; */
+            border-image: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255, 255, 0, .8) 6px, rgba(21, 99, 21, 0.8) 10px) 25;
+            /* border-image: 1 50px (30deg, red 5%, yellow 10%, green 15%, orange, purple, blue) repeat; */
+            border-image-slice: 1;
+            border-width: 20px;
+            background-position: 0px 0px, right bottom;
+            background-color: white;
+        }
+        .bg-sz-auto {
+            background-size: auto;
+            background-repeat: no-repeat;
+            /* default setting */
+        }
+        .bg-sz-wh {
+            background-size: 40px 50px;
+            background-repeat: no-repeat;
+        }
+        .bg-sz-pc {
+            background-size: 40% 100%;
+            background-repeat: no-repeat;
+        }
+        .bg-sz-cover {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .bg-together {
+            background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+        }
+        .entrance {
+            width: 100vw;
+            height: 200vh;
+            border: none;
+            margin: 0px;
+            background-image: url("https://source.unsplash.com/random/800x600");
+            /* to set the webpage more flexible */
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="entrance">
+
+
+
+
+    </div>
+
+
+
+
+    <h1>Background Colors</h1>
+    <h1>Background-color: blue</h1>
+    <div class="blue-bg">
+        <div class="red-ball"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ea unde laudantium odit? Nobis est illo
+            distinctio deserunt, placeat repellat voluptatem delectus, rerum velit assumenda corporis. Ex quae soluta
+            tempora molestiae totam esse natus nesciunt, saepe, quibusdam mollitia voluptas veniam praesentium, id
+            eaque? Modi molestiae eligendi itaque maiores, cupiditate nisi.</p>
+
+
+    </div>
+
+    <h1>Background-color: hex - #2E4053 </h1>
+    <div class="hex-fav-bg"></div>
+
+    <h1>Background-color: rgb - 175, 122, 197 </h1>
+    <div class="rgb-fav-bg"></div>
+
+    <h1>Background-transparent </h1>
+    <div class="transparent-bg"></div>
+
+    <hr>
+    <h1>Background-img </h1>
+    <div class="image-bg"></div>
+    </hr>
+
+    <h1>Background-computer image </h1>
+    <div class="computer-image-bg"></div>
+
+    <h1>Background-gradient </h1>
+    <div class="img-bg-gradient">
+
+        <div class="gradient-ball"></div>
+        <div class="gradient-ball"></div>
+        <div class="gradient-ball"></div>
+        <div class="gradient-ball"></div>
+        <div class="gradient-ball"></div>
+
+    </div>
+    <h1>Background-gradient-to right </h1>
+    <div class="img-bg-gradient-tr"></div>
+
+    <h1>Background-gradient-to right bottom</h1>
+    <div class="img-bg-gradient-trb"></div>
+
+    <h1>Background-gradient-to 40deg</h1>
+    <div class="img-bg-gradient-40deg"></div>
+
+    <h1>Background-gradient-to 0deg</h1>
+    <div class="img-bg-gradient-0deg"></div>
+
+    <h1>Background-gradient-rainbow</h1>
+    <div class="img-bg-gradient-rainbow"></div>
+
+    <h1>Background-gradient-radial-gradient</h1>
+    <div class="img-bg-gradient-rad-gra"></div>
+
+    <h1>Background-gradient-weight-gradient</h1>
+    <div class="img-bg-gra-wei"></div>
+
+
+    <h1>Background-gradient-shape</h1>
+    <div class="img-bg-gra-circle"></div>
+
+
+    <h1>Background-gradient-position</h1>
+    <div class="img-bg-gra-origin"></div>
+
+    <h1>Background-gradient-gradient-position</h1>
+    <div class="img-bg-gra-origin2"></div>
+
+    <h1>Background-gradient-gradient-test</h1>
+    <div class="img-bg-gra-test"></div>
+
+
+    <h1>Background-gradient-closest conner</h1>
+    <div class=" img-bg-gra-cc"></div>
+
+
+    <h1>Background-gradient-repeating</h1>
+    <div class=" img-bg-rad-repeating"></div>
+
+    <h1>Background-gradient-linear-repeating</h1>
+    <div class=" img-bg-lin-repeating"></div>
+
+    <h1>Background Attachment</h1>
+    <h1>Background-attachment: fixed</h1>
+    <div class="fixed img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+    <h1>Background-attachment: scroll</h1>
+    <div class="scroll img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+    <h1>Background-attachment: local-overflow</h1>
+    <div class="local img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+    <h1>Background-clip: border-box</h1>
+    <!-- default setting -->
+    <div class="bg-clip-bb img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+
+    <h1>Background-clip: padding-box</h1>
+    <div class="bg-clip-pb img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+    <h1>Background-origin: content-box</h1>
+    <div class="bg-origin-cb img-bg-web">
+        <div class="expand">Welcome to the coding world</div>
+    </div>
+
+
+    <h1>Background-clip: content-box</h1>
+    <div class="bg-clip-cb bg-acqua">
+        <div class="expand">Welcome to the coding world</div>
+    </div>
+
+    <hr>
+    <h1>Background-origin: border-box</h1>
+    <!-- default setting -->
+    <div class="bg-origin-bb img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+
+    <h1>Background-origin: padding-box</h1>
+    <div class="bg-origin-pb img-bg-web">
+        <div class="expand"></div>
+    </div>
+
+    <h1>Background-origin: content-box</h1>
+    <div class="bg-origin-cb img-bg-web">
+        <div class="expand">Welcome to the coding world</div>
+    </div>
+
+    <h1>Background-origin: content-box</h1>
+    <div class="bg-origin-cb bg-acqua">
+        <div class="expand">Welcome to the coding world</div>
+    </div>
+
+    <hr>
+    <h1>repeating: no-repeat</h1>
+    <!-- default setting -->
+    <div class="bg-repeat-no  img-bg-web">
+    </div>
+
+
+    <h1>Repeating: x</h1>
+    <div class="bg-repeat-x img-bg-web">
+    </div>
+
+    <h1>Repeating: y</h1>
+    <div class="bg-repeat-y img-bg-web">
+    </div>
+
+    <h1>Repeating: space</h1>
+    <div class="bg-repeat-space img-bg-web">
+    </div>
+
+    <h1>Repeating: round</h1>
+    <div class="bg-repeat-round img-bg-web">
+    </div>
+    <hr>
+    <h1>Background: Position</h1>
+    <div class="bg-ps-dr img-bg-web">
+    </div>
+
+    <h1>Background: Position-percent</h1>
+    <div class="bg-ps-pc img-bg-web">
+    </div>
+
+    <h1>Background: Position-number</h1>
+    <div class="bg-ps-num img-bg-web">
+    </div>
+
+
+    <hr>
+    <h1>Background-size: auto </h1>
+    <div class="bg-sz-auto img-bg-web">
+    </div>
+
+    <h1>Background-size: width height</h1>
+    <div class="bg-sz-wh img-bg-web">
+    </div>
+
+    <h1>Background-size: percentage</h1>
+    <div class="bg-sz-pc img-bg-web">
+    </div>
+
+    <h1>Background-size: cover</h1>
+    <div class="bg-sz-cover img-bg-web">
+    </div>
+    <h1>Background-size: contain</h1>
+    <div class="bg-sz-con img-bg-web">
+    </div>
+
+    <h1>Background: together</h1>
+    <div class="bg-together img-bg-web">
+    </div>
+
+    <h1>Background: Position-two-images</h1>
+    <div class="expand2">
+        <div class="two-imgs"></div>
+    </div>
+
+    <!-- https://codepen.io/jsnkuhn/pen/fwbuk -->
+
+
+</body>
+
+</html>
