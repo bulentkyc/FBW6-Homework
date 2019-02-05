@@ -1,0 +1,351 @@
+div{
+    height: 200px;
+    width: 60%;
+    margin-left: 20%;
+    border: solid 2px grey;
+    border-radius:5%;
+    margin-top: 20px;
+    
+}
+
+.two-font{ 
+    font-size: 30px;
+    height: auto;
+    width: 60%;
+    margin-left: 20%;
+    border: solid 2px grey;
+    border-radius:5%;
+    margin-top: 20px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+
+}
+p{
+    /*border: solid 2px grey;*/
+    margin-top: 50px;;
+}
+
+.txt-color{
+    color: rgb(38, 212, 7);
+    font-size: 35px;
+
+    text-align: center;
+}
+
+
+.txt-font-fam{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-google{
+    font-family:'VT323', monospace;
+    font-size: 35px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+
+
+.txt-font-google-1{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+.txt-font-google-2{
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+
+.txt-font-small{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+
+
+.txt-font-larger{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-small2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-med2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-larger2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+
+.txt-font-style-oblique{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-style-ita{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-weight-bold{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-weight-normal{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+}
+
+.txt-font-weight-light{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+.txt-font-variant-normal{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: normal;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+.txt-font-variant-smallcaps{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+.letter-spacing-normal{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: normal;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+.letter-spacing-4px{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 4px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+.letter-spacing-10px{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+
+.line-height-normal{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: normal;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+
+.line-height-60px{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 60px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+
+.line-height-100px{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 100px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+    
+}
+
+.txt-align-right{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: rgb(38, 212, 7);
+    
+}
+
+.txt-align-justify{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    color: rgb(38, 212, 7);
+    
+}
+
+.txt-align-center{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(38, 212, 7);
+    
+}
+
+.txt-align-left{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    color: rgb(38, 212, 7);
+    
+}
+
+.txt-dec-ol{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: overline;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+
+.txt-dec-lt{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: line-through;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+
+.txt-dec-ul{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+    
+}
+
+.txt-dec-ulol{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline overline;
+    color: rgb(38, 212, 7);
+    text-align: center;
+}
+
+.txt-indent{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(38, 212, 7);
+        text-align: left;
+        text-indent:200px;
+
+}
+
+.resp-font{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(38, 212, 7);
+    font-size: calc(15px + (30 - 5) *((100vw - 200px) / (1600 - 300)));
+}
+
+@font-face{
+font-family: google_font;
+src: url(/assets/Satisfy-Regular.ttf);
+
+}
+
+.google-font{
+
+    font-family:google_font;
+    line-height: 60px;
+    color: rgb(38, 212, 7);
+    text-align: center;
+
+
+}
+
+
+
+.text-overflow-clip{
+    width: 250px;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+
+.text-overflow-ellipsis{
+    width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+
+}
+
+.text-shadow{
+    text-shadow: 5px 2px green;
+}
+
+.text-break-normal{
+    width: 50px;
+    word-break: normal;
+
+}
+
+
+.text-break-keep-all{
+    width: 50px;
+    word-break: keep-all;
+
+}
+
+.text-break-break-all{{
+    width: 50px;
+    word-break:break-all;
+
+}
+
+.text-word-spacing{
+    word-spacing: 55px;
+
+}
