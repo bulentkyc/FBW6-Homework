@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: darkslategrey;
+    }
+h1{
+    text-align: center;
+}
+div{
+    max-width: 600px;
+    margin: 0 auto;
+    height: 300px;
+}
+    .twopic-bg{
+        background-image: url("img/david-kovalenko-414249-unsplash.jpg") , url("img/david-kovalenko-414249-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+        background-size: 50% 50%,50% 50%;
+        background-origin: border-box;
+        border: 80px solid rgba(0, 255, 0, 0.233);
+            border-image: repeating-linear-gradient(45deg, 
+                rgb(8, 133, 8), rgb(8, 133, 8) 1.5%, 
+                transparent 1.5% , transparent 3%) 80;
+    
+}
+    </style>
+</head>
+<body>
+    <h1>background-image: twopic</h1>
+    <div class="twopic-bg"></div>
+</body>
+</html>
