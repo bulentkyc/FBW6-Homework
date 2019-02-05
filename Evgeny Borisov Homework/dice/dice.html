@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animations</title>
+    <style>
+
+        p{
+           text-align: center;
+           font-size: 40px;
+           font-weight: bold;
+        }
+
+    .scene {
+        width: 30vw;
+        height: 30vw;
+        perspective: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+
+    }
+.cube{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    text-align: center;
+    transition: all 10s ease-in-out;
+    animation: rotate 10s infinite
+    
+}
+
+img{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    margin: auto;
+    border-radius: 20px;
+    
+}
+@keyframes rotate{
+0% {transform: rotateX(0deg) rotateY(0deg)
+}
+100%
+{
+    transform: rotateX(360deg) rotateY(360deg)
+}
+}
+  
+.facet{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        
+          
+        
+        
+    }
+
+    .facet-front{
+        
+        transform: rotateY(0deg) translateZ(100px)
+    }
+    .facet-back{
+        
+        transform: rotateY(180deg) translateZ(100px)
+
+    }
+    .facet-left{
+       
+        transform: rotateY(-90deg) translateZ(100px)
+    }
+    .facet-right{
+        
+        transform: rotateY(90deg) translateZ(100px)
+    }
+    .facet-top{
+        
+        transform: rotateX(90deg) translateZ(100px)
+    }
+    .facet-bottom{
+        
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    </style>
+</head>
+<body>
+    <p>Welcome to the world of Rotation</p>
+ 
+   
+
+    <div class="scene">
+        <div class="cube">
+        <div class="facet facet-front"> <img src="https://source.unsplash.com/random/190x190?sig=1" alt=""> </div>
+        <div class="facet facet-back"><img src="https://source.unsplash.com/random/190x190?sig=2" alt=""></div>
+        <div class="facet facet-right"><img src="https://source.unsplash.com/random/190x190?sig=3" alt=""></div>
+        <div class="facet facet-left"><img src="https://source.unsplash.com/random/190x190?sig=4" alt=""></div>
+        <div class="facet facet-top"><img src="https://source.unsplash.com/random/190x190?sig=5" alt=""></div>
+        <div class="facet facet-bottom"><img src="https://source.unsplash.com/random/190x190?sig=6" alt=""></div>
+    </div>
+    </div>
+
+
+    </body>
+</html>
