@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(67, 219, 219);
+        }
+    h1{
+        text-align: center;
+    }
+    div{
+        max-width: 600px;
+        margin: 0 auto;
+        height: 300px;
+    }
+        .border{
+            background-image: url("https://picsum.photos/600/400?image=0");
+            background-repeat: no-repeat;
+            background-position: top left, bottom right;
+            background-size: 100%;
+            background-origin: border-box;
+            border: 60px solid rgba(136, 14, 5, 0.582);
+                border-image: repeating-linear-gradient(45deg, 
+                    rgb(133, 33, 8), rgb(20, 8, 133) 1.5%, 
+                    transparent 1.5% , transparent 3%) 80;
+        
+    }
+    </style>
+</head>
+    <body>
+        <h1>Border Image</h1>
+        <div class="border"></div>
+    </body>
+</body>
+</html>
