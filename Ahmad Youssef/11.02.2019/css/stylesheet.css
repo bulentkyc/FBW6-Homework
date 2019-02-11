@@ -181,10 +181,10 @@ transform: translateY(-50%);
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 6s;
-    animation: rotat 5s infinite ;
+    animation: rotat 5s infinite alternate;
   }
   #cube:hover{
-    animation: rotathover 5s infinite ;
+    animation: rotathover 5s ;
   }
   #cube:hover {
     cursor: pointer;
