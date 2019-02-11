@@ -1,0 +1,286 @@
+
+section{
+    width: 500px;
+    height: 450px;
+    background: linear-gradient( #dacaca, #f39898, #dacaca);
+    margin: 5% auto;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-red span:nth-child(1){
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.left-red span:nth-child(2){
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+.left-red span:nth-child(3){
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+.left-red span:nth-child(4){
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+}
+.right-green span:nth-child(1){
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.right-green span:nth-child(2){
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+.right-green span:nth-child(3){
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+.right-green span:nth-child(4){
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+}
+.first .center-green{
+    border: none;
+    border-radius: none;
+}
+.center-green main{
+    display: flex;
+    justify-content: space-around;
+}
+.left-red{
+    background-color: red;
+}
+.center-green {
+    width: 23%;
+}
+.right-green{
+    background-color: green;
+}
+.center-green .green{
+    width: 25px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: green;
+}
+header .center-green .green{
+    margin-top: 8%;
+    height: 100px;
+}
+header .center-green aside span{
+    margin-bottom: 5px;
+}
+header .left-red p, header .left-red i{
+    position: absolute;
+    bottom: -35%;
+    left: -15%;
+}
+header .right-green i{
+    position: absolute;
+    top: 15%;
+    left: -25%;
+}
+header .right-green p{
+    position: absolute;
+    top: -20%;
+    left: -35%;
+}
+main header .center-left{
+    display: flex;
+    margin: 8px;
+
+}
+main header .center-right{
+    display: flex;
+    margin: 8px;
+}
+main .center-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main article aside:nth-of-type(1){
+    width: 100px;
+    height: 25px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: red;
+}
+main article aside:nth-of-type(2){
+    width: 100px;
+    height: 25px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: yellow;
+}
+main .center-center span:nth-of-type(1){
+    margin-left: 19px;
+}
+main .center-center span:nth-of-type(2){
+    margin-right: 24px;
+}
+main footer .center-left{
+    display: flex;
+    margin: 8px;
+}
+main footer .center-right{
+    display: flex;
+    margin: 8px;
+}
+footer .left-red{
+    background-color: blue;
+}
+footer .center-green .green{
+    background-color: blue;
+}
+footer .center-green{
+    margin-top: -10%;
+}
+footer .right-green{
+    background-color: yellow;
+}
+footer .center-green .green{
+    margin-top: -18%;
+    height: 100px;
+}
+footer .center-green aside span{
+    margin-top: 5px;
+}
+
+span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .25s;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+span:hover{
+    background-color: #555;
+    transform: scale(1.4);
+}
+main header span{
+    margin-right: 5px;;
+}
+main footer span{
+    margin-right: 5px;;
+}
+.first div{
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+footer{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .left-red p{
+    position: absolute;
+    bottom: 0%;
+    right: -50%;
+}
+footer .left-red i{
+    position: absolute;
+    bottom: 36%;
+    right: -40%;
+}
+footer .right-green p{
+    position: absolute;
+    top: -45%;
+    right: -20%;
+}
+footer .right-green i{
+    position: absolute;
+    top: -10%;
+    right: -20%;
+}
+/*-------------------------------*/
+img{
+    width: 35px;
+    height: 35px;
+}
+.mainDiv{
+    width: 35px;
+    height: 35px;
+    margin: 20% auto;
+    perspective: 1200px;
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.boxDiv{
+    width: 35px;
+    transform-style: preserve-3d;
+}
+.boxDiv div{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.boxDiv:hover{
+    animation: dice 3s ease-in both;
+}
+.front{
+    transform: translateZ(35px);
+}
+.back{
+    transform: translateZ(0px) rotateY(180deg);
+}
+.left{
+    transform: translate3d(0, 0, 0px) rotateY(-90deg);
+    transform-origin: left;
+}
+.right{
+    transform: translate3d(0px, 0px, 0px) rotateY(90deg);
+    transform-origin: right;
+}
+.top{
+    transform: translate3d(0px, 0px, 35px) rotateX(-90deg);
+    transform-origin: top;
+}
+.bottom{
+    transform: translate3d(0px, 17px, 17px) rotateX(90deg);
+}
+/*@keyframes move{
+    0%{
+        transform: rotatey(0) rotateX(0);
+    }
+    100%{
+        transform: rotatey(360deg) rotateX(10deg);
+    }
+}*/
+@keyframes dice{
+    0%{
+        transform: translateY(0) rotatey(0) rotateX(0);
+    }
+    100%{
+        transform: translateY(-230px) rotatey(360deg) rotateX(100deg);
+    }
+}
