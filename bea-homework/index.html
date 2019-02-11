@@ -3,517 +3,822 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Flying-Chess</title>
+    <title>Music CDs | eBay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <link
+      rel="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
     <style>
-      html {
-        width: 1000px;
-        height: 1000px;
-      }
-      body {
-        display: flex;
-        width: 1000px;
-        height: 1000px;
-        justify-content: center;
-      }
+    html {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  background-color: whitesmoke;
+}
 
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        width: 900px;
-        height: 900px;
-        border: 20px solid peru;
-        justify-content: center;
-        align-items: center;
-      }
+header {
+  display: inline-block;
+  width: 100%;
+  padding: 1%;
+  top: 0px;
+  background: white;
+  text-decoration: none;
+  z-index: 1;
+}
+#sort {
+  float: left;
+  display: flex;
+  justify-content: flex-start;
+  width: 25%;
+}
 
-      #red {
-        display: flex;
-        height: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
+header img {
+  height: 80%;
+  width: 70%;
+  margin: 0%;
+  padding: 0%;
+}
 
-        background-color: rgb(236, 164, 164);
-      }
+/* nav dropdown buttom */
 
-      .redBall {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 150px;
-        width: 150px;
-        background-color: red;
-        border-radius: 50%;
-        padding: 0;
-      }
-      .insideBall a:hover {
-        background-color: purple;
-        border-radius: 100%;
-      }
+input[type="checkbox"] {
+  display: none;
+}
 
-      #blue {
-        display: flex;
-        right: 0;
-        top: 0;
-        height: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(164, 177, 236);
-      }
+input[type="checkbox"]:checked ~ ul {
+  display: block;
+}
 
-      .blueBall {
-        position: absolute;
+header label {
+  width: 75%;
+  font-size: 15px;
+  margin: 0%;
+  color: rgb(68, 64, 64);
+}
+ul {
+  display: none;
+  text-decoration: none;
+  padding: 3%;
+  margin: 0;
+  margin-top: 30%;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 150px;
-        width: 150px;
-        background-color: blue;
-        border-radius: 50%;
-        padding: 0;
-      }
+li {
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  padding: 5%;
+  font-size: 14px;
+}
 
-      #green {
-        display: flex;
-        left: 0;
-        bottom: 0;
-        height: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(132, 209, 108);
-      }
+a {
+  text-decoration: none;
+  color: grey;
+}
 
-      .greenBall {
-        position: absolute;
+nav {
+  display: flex;
+  color: grey;
+  margin-top: 5%;
+  width: 30%;
+  justify-content: center;
+}
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 150px;
-        width: 150px;
-        background-color: green;
-        border-radius: 50%;
-        padding: 0;
-      }
-      #yellow {
-        display: flex;
-        right: 0;
-        bottom: 0;
-        height: 50%;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(219, 178, 101);
-      }
+#sort i {
+  width: 10%;
+  color: grey;
+  border: none;
+  font-size: 20px;
+  margin-top: 3%;
+  margin-right: 10%;
+}
 
-      .yellowBall {
-        position: absolute;
+/* end of nav dropdown */
+/* .sortButton {
+  height: 43px;
+  text-align: left;
+  width: 30%;
+  height: 10px;
+  border: none;
+  background-color: white;
+}
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 150px;
-        width: 150px;
-        background-color: rgb(252, 137, 6);
-        border-radius: 50%;
-        padding: 0;
-      }
+.sortButton a:hover {
+  background-color: turquoise;
+}
 
-      .insideBall {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        width: 200px;
-        position: absolute;
-      }
+#sortDown {
+  height: 80%;
+  background-color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
 
-      .insideBall1,
-      .insideBall2 {
-        background-color: white;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        margin: 5px;
-        /* border: 0.5px solid purple; */
-        z-index: 1;
-      }
+option:checked {
+  color: purple;
+} */
 
-      .insideBall2 {
-        margin: 0;
-      }
+#search {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  padding-top: 1%;
+  background-color: white;
+}
 
-      .insideCube {
-        width: 30px;
-        height: 15px;
-        background-color: white;
-        /* border-top: 0.5px solid grey;
-  border-bottom: 0.5px solid grey; */
-      }
-      .insideCube2 {
-        width: 15px;
-        height: 30px;
-        background-color: white;
-        /* border-right: 0.5px solid grey;
-  border-left: 0.5px solid grey; */
-      }
-      /* red part */
-      .ballsBelowRed {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        padding-top: 300px;
-        padding-right: 10px;
-      }
+.searchButton,
+#search select {
+  height: 45px;
+  padding: 0px;
+  padding-left: 5px;
+  margin: 0;
+  border-radius: 3px;
+  font-size: 14px;
+}
 
-      .ballsAsideRed {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 50px;
-        padding-left: 300px;
-        justify-content: space-around;
-        align-items: center;
-      }
-      /* blue part */
-      .ballsBelowBlue {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        padding-top: 300px;
-        padding-left: 10px;
-      }
+.searchBar {
+  width: 90%;
+  height: 43px;
+  padding: 0px;
+  padding-left: 5px;
+  margin: 0;
+  margin-left: 4%;
+  border-radius: 3px;
+  font-size: 14px;
+}
 
-      .ballsAsideBlue {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        padding-bottom: 50px;
-        padding-right: 300px;
-        justify-content: space-around;
-        align-items: center;
-      }
+.categories {
+  color: grey;
+  font-size: 15px;
+  width: 25%;
+  font-size: 14px;
+}
 
-      /* green part */
+input[type="text"],
+.categories,
+.searchButton {
+  border: 1px solid lightgray;
+  background: white;
+}
 
-      .ballsAboveGreen {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        padding-bottom: 300px;
-        padding-right: 15px;
-      }
+#search .categories option {
+  width: 50%;
+}
 
-      .ballsAsideGreen {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        padding-top: 50px;
-        padding-left: 300px;
-        justify-content: space-around;
-        align-items: center;
-      }
+.searchButton {
+  width: 15%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(95, 107, 179),
+    rgb(45, 66, 158) 90%,
+    rgb(44, 56, 112)
+  );
+  color: white;
+  font-weight: 100;
+  margin-left: 2%;
+  font-size: 16px;
+}
 
-      /* yellow part */
-      .ballsAboveYellow {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        padding-bottom: 300px;
-        padding-left: 20px;
-      }
+#search h6 {
+  width: 5%;
+  margin: 2% 1% 2% 1%;
+  color: grey;
+}
+.sidenav {
+  height: 100%;
+  width: 240px;
+  z-index: 1;
+  left: 0;
+  margin-left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: rgb(68, 64, 64);
+}
 
-      .ballsAsideYellow {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        padding-top: 40px;
-        padding-right: 300px;
-        justify-content: space-around;
-        align-items: center;
-      }
+.sidenav h1,
+.sidenav h4,
+.sidenav a:first-of-type {
+  margin: 10px 3px 15px 10%;
+}
 
-      /* additional balls */
+.sidenav a {
+  margin: 5px 3px 6px 20%;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  color: rgb(68, 64, 64);
+}
 
-      .ballsAddAbove {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 320px;
-        margin-left: 450px;
-        z-index: 1;
-      }
+.sidenav .bottom {
+  border-bottom: 0.5px dashed rgb(196, 192, 192);
+  width: 100%;
+  margin: 0;
+  padding-left: 20%;
+  padding-bottom: 10px;
+}
 
-      .ballsAddRight {
-        position: absolute;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 450px;
-        margin-left: 335px;
-        z-index: 1;
-      }
+main {
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  width: 1000px;
+}
 
-      .ballsAddLeft {
-        position: absolute;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 450px;
-        margin-right: 335px;
-        z-index: 1;
-      }
+section {
+  clear: both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-      .ballsAddBelow {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 320px;
-        margin-left: 450px;
-        z-index: 1;
-      }
+.ShopNow {
+  margin-top: 100px;
+  margin-left: 2%;
+  display: flex;
+  justify-content: flex-start;
+  width: 98%;
+  color: rgb(26, 26, 65);
+  border: 0.5px solid rgb(196, 189, 189, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 0px 0.5px gray;
+}
 
-      .greenBar {
-        position: absolute;
-        height: 200px;
-        width: 50px;
-        background-color: green;
-        margin-top: 150px;
-        margin-left: 450px;
-        border-radius: 40px;
-      }
-      .blueBar {
-        position: absolute;
-        height: 200px;
-        width: 50px;
-        background-color: blue;
-        margin-bottom: 150px;
-        margin-left: 450px;
-        border-radius: 40px;
-      }
-      .yellowBar {
-        position: absolute;
-        height: 50px;
-        width: 200px;
-        background-color: yellow;
-        margin-top: 450px;
-        margin-right: 150px;
-        border-radius: 40px;
-      }
+.textShopNow {
+  padding: 3%;
+  width: 42%;
+  height: 300px;
+  background-color: rgb(63, 146, 240);
+}
+.textShopNow h4 {
+  margin-top: 30%;
+  padding: 2%;
+  width: 150px;
+  border: 1px solid rgb(26, 26, 65, 0.7);
+  color: rgb(26, 26, 65);
+}
 
-      @media (maxlength > 600px) {
-        .yellowBar a:hover {
-          height: 200px;
-          width: 400px;
-          background-color: purple;
-        }
-      }
-      .redBar {
-        position: absolute;
-        height: 50px;
-        width: 200px;
-        background-color: red;
-        margin-top: 450px;
-        margin-left: 150px;
-        border-radius: 40px;
-      }
+.imgShopNow {
+  width: 650px;
+}
+
+.ShopEvent {
+  margin-left: 2%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 98%;
+  border: 0.5px solid rgb(196, 189, 189, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 0px 0.5px gray;
+}
+
+.textShopEvent {
+  padding: 3%;
+  width: 50%;
+  height: 200px;
+  background-color: white;
+  color: rgb(88, 86, 86);
+}
+.textShopEvent h5 {
+  margin-top: 10%;
+  padding: 2%;
+  text-align: center;
+  width: 250px;
+  border: 0.5px solid rgb(196, 189, 189, 0.7);
+}
+
+.imgShopEvent {
+  width: 600px;
+  height: 300px;
+}
+
+#deal,
+#honor,
+#soundtrack {
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0.5px gray;
+  margin-left: 2%;
+  width: 98%;
+}
+
+#deal h1,
+#deal h5,
+#deal figcaption,
+#honor h1,
+#honor h5,
+#honor figcaption,
+#soundtrack h1 {
+  color: rgb(88, 86, 86);
+  padding: 1%;
+  margin: 0;
+}
+
+.imgDeal,
+.imgHonor {
+  display: flex;
+  justify-content: space-between;
+}
+
+#deal figure,
+#honor figure {
+  margin: 10px;
+}
+
+#deal figcaption {
+  font-size: 15px;
+  width: 170px;
+  margin: 0;
+}
+
+#deal h3,
+#deal h4 {
+  margin: 5px;
+}
+
+#honor figcaption {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+}
+
+#imgSoundtrack {
+  height: 400px;
+  width: 100%;
+}
+.a,
+.b,
+.c,
+.d,
+.e,
+.f,
+.g,
+.h {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+}
+
+#soundtrack {
+  width: 98%;
+}
+
+#soundtrack h4 {
+  color: rgb(87, 84, 84);
+  margin: 0;
+  padding: 2%;
+  width: 100%;
+}
+
+#soundtrack .ellipsis {
+  font-size: 12px;
+  white-space: nowrap;
+  width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(59, 58, 58);
+}
+
+#soundtrack figure {
+  height: 400px;
+  width: 24%;
+  margin: 10px;
+}
+#soundtrack .wholeText {
+  display: flex;
+  margin: 2px;
+}
+
+#soundtrack h1 {
+  margin-top: 5px;
+  color: rgb(36, 35, 35);
+}
+
+#soundtrack .rightText {
+  width: 150px;
+  height: 100px;
+  margin-left: 5px;
+  color: rgb(59, 58, 58);
+}
+
+#soundtrack .rightText p {
+  color: rgb(59, 58, 58);
+  margin-left: 5px;
+}
+
+.rating {
+  font-size: 12px;
+  margin: 5px;
+}
+.rating i {
+  color: rgb(255, 123, 0);
+}
+.newPrice {
+  color: rgb(32, 32, 32);
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.usedPrice {
+  color: rgb(59, 58, 58);
+  font-size: 10px;
+  margin-left: 6px;
+}
+
     </style>
   </head>
   <body>
-    <main>
-      <div id="red">
-        <div class="redBall">
-          <div class="insideBall">
-            <div class="aboveBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-            <div class="belowBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-          </div>
-        </div>
-        <!-- red balls -->
-        <div class="ballsBelowRed">
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-        </div>
-        <div class="ballsAsideRed">
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-        </div>
-        <div class="ballsAddAbove">
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-        </div>
-        <div class="greenBar"></div>
-        <div class="redBar"></div>
+    <header id="header">
+      <!-- logo & shop by catelogies -->
+      <div id="sort">
+        <img src="./ebay.png" />
+        <!-- shop by categories -->
+        <nav>
+          <input type="checkbox" id="dropdown" />
+          <label for="dropdown"
+            >Shop by <br />
+            Category</label
+          >
+          <ul>
+            <li><a href="#">Arts & Collections</a></li>
+            <li><a href="#">Home & Garden</a></li>
+            <li><a href="#">Toys & Hobbies</a></li>
+            <li><a href="#">Mother & Kids</a></li>
+          </ul>
+          <i class="fas fa-sort-down"></i>
+        </nav>
+
+        <!-- <select name="my-select" id="sortDown">
+          <button class="sortButton">
+            Shop by Category
+          </button>
+          <option value="opt0">Shop by Category</option>
+          <option value="opt1">Home & Garden</option>
+          <option value="opt2">Toys & Hobbies</option>
+          <option value="opt3">Mother & Kids</option>
+        </select> -->
       </div>
 
-      <div id="blue">
-        <div class="blueBall">
-          <div class="insideBall">
-            <div class="aboveBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-            <div class="belowBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
+      <form method="GET" id="search">
+        <input
+          class="searchBar"
+          type="text"
+          name="search"
+          placeholder="Search for anything"
+        />
+        <select name="categories" mutiple size="1" class="categories">
+          <option value="Arts">Arts</option>
+          <option value="Antiques">Antiques</option>
+          <option value="Baby">Baby</option>
+          <option value="Books">Books</option>
+          <option value="CDs" selected>CDs</option>
+        </select>
+        <input type="submit" value="Search" class="searchButton" />
+        <h6>Advanced</h6>
+      </form>
+    </header>
+    <section>
+      <aside>
+        <div class="sidenav">
+          <h1 href="#about">Music CDs</h1>
+          <h4 href="#services">Shop by categories</h4>
+          <a href="#clients">Music</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients" class="bottom">Clients</a>
+          <br>
+          <h4 href="#services">Shopping Trend Artists</h4>
+          <a href="#clients">Music</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients" class="bottom">Clients</a>
+          <br>
+          <h4 href="#services">Sell on eBay</h4>
+          <a href="#clients">Music</a>
+          <a href="#contact" class="bottom">Contact</a>
+<br>
+          <h4 href="#services">Shop Classic Artisits</h4>
+          <a href="#clients">Music</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients" class="bottom">Clients</a>
+        </div>
+      </aside>
+      <main>
+        <div class="ShopNow">
+          <div class="textShopNow">
+            <h1>
+              Top Selling CDs <br />
+              Under $10
+            </h1>
+            <h5>
+              Free Shipping
+            </h5>
+            <h4>Shop Now <i class="fas fa-arrow-right"></i></h4>
           </div>
+          <img src="https://source.unsplash.com/random/650x300" />
         </div>
-        <!-- blue balls -->
-        <div class="ballsBelowBlue">
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-        </div>
-        <div class="ballsAsideBlue">
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-        </div>
-
-        <div class="yellowBar"><a></a></div>
-      </div>
-
-      <div id="green">
-        <div class="greenBall">
-          <div class="insideBall">
-            <div class="aboveBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-            <div class="belowBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
+        <div class="ShopEvent">
+          <div class="textShopEvent">
+            <h1>
+              Best of Grammys <br />
+             2019 on Vinyl & CD
+            </h1>
+            <h6>
+              Free Shipping
+            </h6>
+            <h5>Shop Event</i></h5>
           </div>
+          <img src="https://source.unsplash.com/random/600x300" class="imgShopEvent">
         </div>
-        <!-- green balls -->
-        <div class="ballsAboveGreen">
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-        </div>
-        <div class="ballsAsideGreen">
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-        </div>
-        <div class="ballsAddBelow">
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-        </div>
-        <div class="ballsAddLeft">
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-        </div>
+                <div id="deal">
+                  <div class="textDeal">
+                    <h1>
+                      Limited Time Deals
+                    </h1>
+                    <h5>Free Shipping included</h5>
+                  </div>
+                  <article class="imgDeal">
+                  <figure>
+                    <img src="https://source.unsplash.com/random/170x170">
+                    <figcaption>
+                      Queen + Adam Lambert - Bohemian Rhapsody [New CD]
+                      <h3>$11.99</h3>
+                      <h4><del>$16.99</del>| &5.99 OFF</h4>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="https://source.unsplash.com/random/170x171">
+                    <figcaption>
+                      Queen + Adam Lambert - Bohemian Rhapsody [New CD]
+                      <h3>$11.99</h3>
+                      <h4><del>$16.99</del>| &5.99 OFF</h4>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="https://source.unsplash.com/random/170x172">
+                    <figcaption>
+                      Queen + Adam Lambert - Bohemian Rhapsody [New CD]
+                      <h3>$11.99</h3>
+                      <h4><del>$16.99</del>| &5.99 OFF</h4>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="https://source.unsplash.com/random/170x173">
+                    <figcaption>
+                      Queen + Adam Lambert - Bohemian Rhapsody [New CD]
+                      <h3>$11.99</h3>
+                      <h4><del>$16.99</del>| &5.99 OFF</h4>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="https://source.unsplash.com/random/170x174">
+                    <figcaption>
+                      Queen + Adam Lambert - Bohemian Rhapsody [New CD]
+                      <h3>$11.99</h3>
+                      <h4><del>$16.99</del>| &11.99</h4>
+                    </figcaption>
+                  </figure>
+                </div>
+                  <div id="honor">
+                   <div class="textHonor">
+                     <h1>
+                        In Honor of Black History Month
+                      </h1>
+                    </div>
+                    <article class="imgHonor">
+                      <figure>
+                        <img src="https://source.unsplash.com/random/150x140">
+                        <figcaption>
+                          Marvin Gaye </figcaption>
+                      </figure>
+                      <figure>
+                        <img src="https://source.unsplash.com/random/150x145">
+                        <figcaption>
+                          Marvin Gaye </figcaption>
+                      </figure>
+                      <figure>
+                        <img src="https://source.unsplash.com/random/150x150">
+                        <figcaption>
+                          Marvin Gaye </figcaption>
+                      </figure>
+                      <figure>
+                        <img src="https://source.unsplash.com/random/150x152">
+                        <figcaption>
+                          Marvin Gaye </figcaption>
+                      </figure>
+                      <figure>
+                        <img src="https://source.unsplash.com/random/150x153">
+                        <figcaption>
+                          Marvin Gaye </figcaption>
+                      </figure>
+               </div>
 
-        <div class="blueBar"></div>
-      </div>
+                <div id="soundtrack">
+                  <div class="textSoundtrack">
+                    <h4>
+                      Top Soundtracks
+                      </h4>
+                  </div>
+                  <article class="imgSoundtrack">
+                    <div class="a">
+                    <figure>
+                      <img src="https://source.unsplash.com/random/230x230">
+                      <figcaption class="wholeText">
+                        <h1>1</h1>
+                        <div class="rightText"><p class="ellipsis">
+                          a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18
+                        </p>
+                       <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>(54)</p>
+                        <p class="newPrice">$16.99 New</p><p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <!-- </div>
+                    <div class="b"> -->
+                   
+                    <figure>
+                      <img src="https://source.unsplash.com/random/230x231">
+                      <figcaption class="wholeText">
+                        <h1>2</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  <!-- </div>
+                                      <div class="c"> -->
 
-      <div id="yellow">
-        <div class="yellowBall">
-          <div class="insideBall">
-            <div class="aboveBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-            <div class="belowBall">
-              <div class="insideBall1"></div>
-              <div class="insideBall1"></div>
-            </div>
-          </div>
-        </div>
-        <!-- yellow balls -->
-        <div class="ballsAddRight">
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-        </div>
+                    <figure>
+                      <img src="https://source.unsplash.com/random/230x232">
+                      <figcaption class="wholeText">
+                        <h1>3</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="far fa-star"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <!-- </div>
+                    <div class="d"> -->
+                   
+                    <figure>
+                      <img src="https://source.unsplash.com/random/230x233">
+                      <figcaption class="wholeText">
+                        <h1>4</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    </div>
+                    <div class="e">
+                    <figure>
+                      <img src="https://source.unsplash.com/random/231x230">
+                      <figcaption class="wholeText">
+                        <h1>5</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="far fa-star"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <!-- </div>
+                                        <div class="f"> -->
 
-        <div class="ballsAboveYellow">
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube"></div>
-          <div class="insideBall2"></div>
-        </div>
-        <div class="ballsAsideYellow">
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-          <div class="insideCube2"></div>
-          <div class="insideBall2"></div>
-        </div>
-      </div>
-    </main>
+                    <figure>
+                      <img src="https://source.unsplash.com/random/232x230">
+                      <figcaption class="wholeText">
+                        <h1>6</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <!-- </div>
+                                        <div class="g"> -->
+
+                    <figure>
+                      <img src="https://source.unsplash.com/random/233x230">
+                      <figcaption class="wholeText">
+                        <h1>7</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="far fa-star"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  <!-- </div>
+                    <div class="h"> -->
+                    <figure>
+                      <img src="https://source.unsplash.com/random/231x231">
+                      <figcaption class="wholeText">
+                        <h1>8</h1>
+                        <div class="rightText">
+                          <p class="ellipsis">
+                            a Star Is Born Soundtrack Lady Gagabradley Cooper Audio CD 05oct18 a Star Is Born Soundtrack Lady Gagabradley
+                            Cooper Audio CD 05oct18
+                          </p>
+                          <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                              class="fas fa-star"></i><i class="far fa-star"></i>(54)</p>
+                          <p class="newPrice">$16.99 New</p>
+                          <p class="usedPrice"> &5.99 Used</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    </div>
+                </div>
+
+                </div>
+                </div>
+
+
+                </article>
+
+      </main>
+    </section>
   </body>
 </html>
