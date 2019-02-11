@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Flying-Chess</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <style>
+      html {
+        width: 1000px;
+        height: 1000px;
+      }
+      body {
+        display: flex;
+        width: 1000px;
+        height: 1000px;
+        justify-content: center;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 900px;
+        height: 900px;
+        border: 20px solid peru;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #red {
+        display: flex;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgb(236, 164, 164);
+      }
+
+      .redBall {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        border-radius: 50%;
+        padding: 0;
+      }
+      .insideBall a:hover {
+        background-color: purple;
+        border-radius: 100%;
+      }
+
+      #blue {
+        display: flex;
+        right: 0;
+        top: 0;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(164, 177, 236);
+      }
+
+      .blueBall {
+        position: absolute;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        background-color: blue;
+        border-radius: 50%;
+        padding: 0;
+      }
+
+      #green {
+        display: flex;
+        left: 0;
+        bottom: 0;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(132, 209, 108);
+      }
+
+      .greenBall {
+        position: absolute;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        background-color: green;
+        border-radius: 50%;
+        padding: 0;
+      }
+      #yellow {
+        display: flex;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(219, 178, 101);
+      }
+
+      .yellowBall {
+        position: absolute;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        background-color: rgb(252, 137, 6);
+        border-radius: 50%;
+        padding: 0;
+      }
+
+      .insideBall {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+      }
+
+      .insideBall1,
+      .insideBall2 {
+        background-color: white;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+        /* border: 0.5px solid purple; */
+        z-index: 1;
+      }
+
+      .insideBall2 {
+        margin: 0;
+      }
+
+      .insideCube {
+        width: 30px;
+        height: 15px;
+        background-color: white;
+        /* border-top: 0.5px solid grey;
+  border-bottom: 0.5px solid grey; */
+      }
+      .insideCube2 {
+        width: 15px;
+        height: 30px;
+        background-color: white;
+        /* border-right: 0.5px solid grey;
+  border-left: 0.5px solid grey; */
+      }
+      /* red part */
+      .ballsBelowRed {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        padding-top: 300px;
+        padding-right: 10px;
+      }
+
+      .ballsAsideRed {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        padding-left: 300px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* blue part */
+      .ballsBelowBlue {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        padding-top: 300px;
+        padding-left: 10px;
+      }
+
+      .ballsAsideBlue {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding-bottom: 50px;
+        padding-right: 300px;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      /* green part */
+
+      .ballsAboveGreen {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        padding-bottom: 300px;
+        padding-right: 15px;
+      }
+
+      .ballsAsideGreen {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-left: 300px;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      /* yellow part */
+      .ballsAboveYellow {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        padding-bottom: 300px;
+        padding-left: 20px;
+      }
+
+      .ballsAsideYellow {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-right: 300px;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      /* additional balls */
+
+      .ballsAddAbove {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 320px;
+        margin-left: 450px;
+        z-index: 1;
+      }
+
+      .ballsAddRight {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 450px;
+        margin-left: 335px;
+        z-index: 1;
+      }
+
+      .ballsAddLeft {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 450px;
+        margin-right: 335px;
+        z-index: 1;
+      }
+
+      .ballsAddBelow {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 320px;
+        margin-left: 450px;
+        z-index: 1;
+      }
+
+      .greenBar {
+        position: absolute;
+        height: 200px;
+        width: 50px;
+        background-color: green;
+        margin-top: 150px;
+        margin-left: 450px;
+        border-radius: 40px;
+      }
+      .blueBar {
+        position: absolute;
+        height: 200px;
+        width: 50px;
+        background-color: blue;
+        margin-bottom: 150px;
+        margin-left: 450px;
+        border-radius: 40px;
+      }
+      .yellowBar {
+        position: absolute;
+        height: 50px;
+        width: 200px;
+        background-color: yellow;
+        margin-top: 450px;
+        margin-right: 150px;
+        border-radius: 40px;
+      }
+
+      @media (maxlength > 600px) {
+        .yellowBar a:hover {
+          height: 200px;
+          width: 400px;
+          background-color: purple;
+        }
+      }
+      .redBar {
+        position: absolute;
+        height: 50px;
+        width: 200px;
+        background-color: red;
+        margin-top: 450px;
+        margin-left: 150px;
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="red">
+        <div class="redBall">
+          <div class="insideBall">
+            <div class="aboveBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+            <div class="belowBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+          </div>
+        </div>
+        <!-- red balls -->
+        <div class="ballsBelowRed">
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+        </div>
+        <div class="ballsAsideRed">
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+        </div>
+        <div class="ballsAddAbove">
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+        </div>
+        <div class="greenBar"></div>
+        <div class="redBar"></div>
+      </div>
+
+      <div id="blue">
+        <div class="blueBall">
+          <div class="insideBall">
+            <div class="aboveBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+            <div class="belowBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+          </div>
+        </div>
+        <!-- blue balls -->
+        <div class="ballsBelowBlue">
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+        </div>
+        <div class="ballsAsideBlue">
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+        </div>
+
+        <div class="yellowBar"><a></a></div>
+      </div>
+
+      <div id="green">
+        <div class="greenBall">
+          <div class="insideBall">
+            <div class="aboveBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+            <div class="belowBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+          </div>
+        </div>
+        <!-- green balls -->
+        <div class="ballsAboveGreen">
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+        </div>
+        <div class="ballsAsideGreen">
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+        </div>
+        <div class="ballsAddBelow">
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+        </div>
+        <div class="ballsAddLeft">
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+        </div>
+
+        <div class="blueBar"></div>
+      </div>
+
+      <div id="yellow">
+        <div class="yellowBall">
+          <div class="insideBall">
+            <div class="aboveBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+            <div class="belowBall">
+              <div class="insideBall1"></div>
+              <div class="insideBall1"></div>
+            </div>
+          </div>
+        </div>
+        <!-- yellow balls -->
+        <div class="ballsAddRight">
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+        </div>
+
+        <div class="ballsAboveYellow">
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube"></div>
+          <div class="insideBall2"></div>
+        </div>
+        <div class="ballsAsideYellow">
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+          <div class="insideCube2"></div>
+          <div class="insideBall2"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
