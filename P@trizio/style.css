@@ -1,136 +1,139 @@
-/* DESKTOP VIEW*/
+.container{
+    background-color: #E0E4DC;
+    width: 75%;
+    align-content: center;
+    border:solid 35px #DBBC9A;
+    margin-left: 10%;
 
-.header{
-    background-color: red;
-    padding: 30px;
-    color: #eee;
-    font-weight: bold;
-    margin: 0.5%;
-}
-.home-cont{
-    display: block;
-    width: 100%;
-    display: flex;
-    justify-content:space-around;
-}
-.menu{
-    margin: 0.5%;
-    width: 25%;
-}
-
-.home-cont ul{
-    list-style-type: none;
-    margin: 1%;
-}
-
-.home-cont li{
-    margin-bottom: 0.5%;
-    padding:1%;
-    background-color: red;
-    color: #eee;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
-    font-weight: bold;
-}
-
-.home-text{
-    margin: 1%;
-    padding:1%;
-    width: 50%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+.circle{
+    width:55px;
+    height: 55px;
+    border-radius: 50%;
+    border:solid 2px grey;
+}
 
-.aside-block{
-    margin: 1%;
-    width: 25%;
+.little-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:solid 2px grey;
+    background-color: #E0E4DC;
+}
+
+table{
+    z-index: 1;
     /* border:solid 2px grey; */
-    background-color: red;
-    padding:1%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #eee;
+    margin-left: 15%;
 }
 
-.footer{
-    margin-top: 1%;
-    width: 100%;
-    height: 60px;
-    padding:0.5%;   
-    text-align: center; 
+.circle-red{    
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
     background-color: red;
-    color: #eee;
+    z-index: 0;
+    margin-left:18%;
+    margin-top:5%;
+    border-radius: 50%;
 }
 
-/* TABLET VIEW*/
+/* .circle-red div:nth-of-type(3), div:nth-of-type(4){
+    background-color: black;
+    align-self: stretch;
+} */
 
-@media(min-width: 768px) and (max-width: 1024px) {
+.circle-green{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    z-index: 0;
+    margin-left:42%;
+    margin-top:5%;
+    border-radius: 50%;
+}
 
-    .home-cont{
-        display: block;
-        
-    }
-    .header{
-        width: 100%; 
-    }
-    .menu{
-        width: 100%; 
+.circle-yellow{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    z-index: 0;
+    margin-left:18%;
+    margin-top:29%;
+    border-radius: 50%;
+}
 
-        
-    }
+.circle-blue{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    z-index: 0;
+    margin-left:42%;
+    margin-top:29%;
+    border-radius: 50%;
+}
 
-    .menu ul{
-        margin:auto;
-        width: 100%;
-        background-color: red;
-        display: flex;
-        flex-direction: row;
-        /* border:solid 2px grey; */
-        justify-content: space-between;
-        font-size: 1.1em;
-    }
+#line-red{
+    position:absolute;
+    z-index: 1;
+    width: 200px;;
+    height: 45px;
+    background-color: red;
+    margin-left:18%;
+    margin-top:-23.5%;
+    border-radius: 15px;
+}
+
+#line-yellow{
+    position:absolute;
+    z-index:4;
+    width: 200px;;
+    height: 45px;
+    background-color: yellow;
+    margin-left:38.5%;
+    margin-top:-23.5%;
+    border-radius: 15px;    
     
-
-    .home-text{
-        margin:auto;
-        width: 100%; 
-    }
-    .aside-block{
-        display: inline-flex;
-        width: 100%; 
-    }
-
 }
 
-
-
-
-
-
-/* SMARTPHONE VIEW*/
-
-@media(max-width:767px){
-    .home-cont{
-        display: block;
-        
-    }
-    .header{
-        margin: auto;
-        width: 100%; 
-    }
-    .menu{
-        margin: auto;
-        width: 100%;   
-    }
-
-    .home-text{
-        margin: auto;
-        width: 100%; 
-    }
-    .aside-block{
-        margin: auto;
-        width: 100%; 
-    }
-
+#line-blue{
+    position:absolute;
+    z-index:1;
+    width:45px;
+    height: 200px;
+    background-color: blue;
+    margin-left:33.4%;
+    margin-top:-19%;
+    border-radius: 15px;
 }
 
-
+#line-green{
+    position:absolute;
+    z-index: 2;
+    width:45px;
+    height: 200px;
+    background-color: green;
+    margin-left:33.4%;
+    margin-top:-38.5%;
+    border-radius: 15px;
+}
