@@ -1,0 +1,136 @@
+/* DESKTOP VIEW*/
+
+.header{
+    background-color: red;
+    padding: 30px;
+    color: #eee;
+    font-weight: bold;
+    margin: 0.5%;
+}
+.home-cont{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+}
+.menu{
+    margin: 0.5%;
+    width: 25%;
+}
+
+.home-cont ul{
+    list-style-type: none;
+    margin: 1%;
+}
+
+.home-cont li{
+    margin-bottom: 0.5%;
+    padding:1%;
+    background-color: red;
+    color: #eee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.home-text{
+    margin: 1%;
+    padding:1%;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.aside-block{
+    margin: 1%;
+    width: 25%;
+    /* border:solid 2px grey; */
+    background-color: red;
+    padding:1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #eee;
+}
+
+.footer{
+    margin-top: 1%;
+    width: 100%;
+    height: 60px;
+    padding:0.5%;   
+    text-align: center; 
+    background-color: red;
+    color: #eee;
+}
+
+/* TABLET VIEW*/
+
+@media(min-width: 768px) and (max-width: 1024px) {
+
+    .home-cont{
+        display: block;
+        
+    }
+    .header{
+        width: 100%; 
+    }
+    .menu{
+        width: 100%; 
+
+        
+    }
+
+    .menu ul{
+        margin:auto;
+        width: 100%;
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        /* border:solid 2px grey; */
+        justify-content: space-between;
+        font-size: 1.1em;
+    }
+    
+
+    .home-text{
+        margin:auto;
+        width: 100%; 
+    }
+    .aside-block{
+        display: inline-flex;
+        width: 100%; 
+    }
+
+}
+
+
+
+
+
+
+/* SMARTPHONE VIEW*/
+
+@media(max-width:767px){
+    .home-cont{
+        display: block;
+        
+    }
+    .header{
+        margin: auto;
+        width: 100%; 
+    }
+    .menu{
+        margin: auto;
+        width: 100%;   
+    }
+
+    .home-text{
+        margin: auto;
+        width: 100%; 
+    }
+    .aside-block{
+        margin: auto;
+        width: 100%; 
+    }
+
+}
+
+
