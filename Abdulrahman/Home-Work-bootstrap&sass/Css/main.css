@@ -1,0 +1,17 @@
+nav .logo {
+  font-family: 'Ewert', cursive;
+}
+header {
+  height: 100vh;
+  background: linear-gradient(#105e62, #41aaa8, #41aaa8);
+}
+main p {
+  line-height: 30px;
+}
+article img {
+  width: 250px;
+  height: 250px;
+}
+.jumbotron {
+  background: linear-gradient(#105e62, #41aaa8);
+}
