@@ -1,0 +1,55 @@
+nav{
+    font-size: 14px;
+}
+section.jumbotron{
+    height: 70vh;
+}
+.logo::before{
+    content: " ";
+    width: 11px;
+    height: 11px;
+    background-color: #17a2b7;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+.logo::after{
+    content: " ";
+    width: 11px;
+    height: 11px;
+    background-color: #17a2b7;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+}
+.logo.display-2::before{
+    left: 40%;
+    width: 22px;
+    height: 22px;
+}
+.logo.display-2::after{
+    right: 40%;
+    width: 22px;
+    height: 22px;
+}
+@media (min-width: 350px) and (max-width: 800px){
+    h1.myTest{
+        font-size: 26px;
+    }
+    aside.myTest{
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo.display-2::before{
+        display: none;
+    }
+    .logo.display-2::after{
+        display: none;
+    }
+}
