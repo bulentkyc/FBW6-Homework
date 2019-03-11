@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Srisakdi:700");
+.Mybtn-Orange {
+  color: #ef5d23;
+  background-color: white;
+  border-color: #ef5d23;
+}
+.Mybtn-Orange:hover {
+  color: #fff;
+  background-color: #ef5d23;
+  border-color: #ef5d23;
+}
+
+footer .logo, header nav .logo {
+  font-family: "Srisakdi", cursive;
+  color: #2a1107;
+  text-decoration: none;
+}
+
+footer .dot, header nav .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ef5d23;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+header nav a {
+  color: #ef5d23;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: none;
+}
+header nav .myActive {
+  border-bottom: 4px solid #ef5d23;
+}
+header nav .dropdown button, header nav .dropdown a {
+  color: #ef5d23;
+  text-decoration: none;
+}
+header nav .dropdown button:hover, header nav .dropdown a:hover {
+  color: #2a1107;
+}
+header #slider {
+  height: 500px;
+  background-color: #9b350d;
+}
+header #slider .firstimage {
+  background-image: url("../img/frame-3717701.svg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+header #slider .secimage {
+  background-image: url("../img/mental-health-3813766.svg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+header #slider .thridimag {
+  background-image: url("../img/yin-1751104.svg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+main #firstSection .myNumBox {
+  background-color: #9b350d;
+  color: #ef5d23;
+}
+main #secSection {
+  background-color: #9b350d;
+  color: white;
+}
+main #secSection label .fas {
+  background-color: #ef5d23;
+  height: calc(1.5em + .75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+main #secSection label .form-control {
+  border-radius: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+main #secSection ul p {
+  border-bottom: 1px solid white;
+}
+main #thirdSection #carouselExampleCaptions {
+  height: 300px;
+}
+main #thirdSection #carouselExampleCaptions .carousel-indicators li {
+  background-color: #ef5d23;
+}
+main #thirdSection #carouselExampleCaptions .anothericonleft {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+main #fousection .w-60 {
+  width: 60%;
+}
+main #fousection .Mycard-header {
+  background-color: #ef5d23;
+  padding: 10px;
+}
+main #fousection .borderraduistop {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+main #fousection .borderraduisbottom {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+footer {
+  background-color: #9b350d;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

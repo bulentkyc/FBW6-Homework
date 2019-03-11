@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Srisakdi:700');
+$blackOrange: rgb(42, 17, 7);
+$lightOrange: rgb(155, 53, 13);
+$salamander :rgb(239, 93, 35);
+$litorange :rgb(216, 170, 152);
+.Mybtn-Orange {
+    color: $salamander;
+    background-color: white;
+    border-color: $salamander;
+    &:hover {
+        color: #fff;
+        background-color: $salamander;
+        border-color: $salamander;
+      }
+}
+
+@mixin ImageSlider($url){
+    background-image: url("../img/" + $url);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: right;
+}  
+@mixin Color($color, $text-dec) {
+    color: $color;
+    text-decoration: $text-dec;
+}
+%logo{
+    font-family: 'Srisakdi', cursive;
+    @include Color($blackOrange, none);
+}
+%dot{
+    width: 10px;
+    height: 10px;
+    background-color: $salamander;
+    border-radius: 50%;
+    display: inline-block;
+    margin:0 5px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+header{
+    nav{
+        a{
+            @include Color($salamander, none);
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .logo{
+            @extend %logo;
+        }
+        .dot{
+            @extend %dot;
+        }
+        .myActive{
+            border-bottom: 4px solid $salamander;
+        }
+        .dropdown{
+            button{
+                @include Color($salamander, none);
+                &:hover{
+                    color: rgb(42, 17, 7);
+                }
+            }
+            a{
+                @extend button;
+            }
+        }
+    }
+    #slider{
+        height: 500px;
+        background-color: $lightOrange;
+        .firstimage{
+            
+            @include ImageSlider("frame-3717701.svg");
+        }
+        .secimage{
+            @include ImageSlider("mental-health-3813766.svg");
+        }
+        .thridimag{
+            @include ImageSlider("yin-1751104.svg");
+        }
+    }
+}
+main{
+    #firstSection{
+        .myNumBox{
+            background-color: $lightOrange;
+            color: $salamander ;
+        }
+    }
+     #secSection{
+        background-color: $lightOrange;
+        color:white;
+    
+     
+     label{
+         .fas{
+             background-color: $salamander;
+             height: calc(1.5em + .75rem + 2px);
+             padding: .375rem .75rem;
+             font-size: 1rem;
+             line-height: 1.5;
+         }
+         .form-control{
+            border-radius: 0;
+            border-bottom-left-radius: 0.25rem;
+            border-top-left-radius: 0.25rem;
+         }
+         
+     }
+     ul{
+        p{
+            border-bottom: 1px solid white;
+        }
+     }
+    }
+    #thirdSection{
+        #carouselExampleCaptions{
+            height: 300px;
+            .carousel-indicators{
+                li{
+                    background-color: $salamander;
+                }
+            }
+            .anothericonleft{
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+            }
+        }
+        
+    }
+    #fousection{
+        .w-60{
+            width: 60%;
+        }
+        
+        .Mycard-header {
+            background-color: $salamander;
+            padding: 10px;
+    }
+    .borderraduistop{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .borderraduisbottom{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+}
+footer{
+    background-color: $lightOrange;
+    .logo{
+        @extend %logo;
+    }
+    .dot{
+        @extend %dot;
+    }
+}
