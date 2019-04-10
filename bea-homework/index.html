@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bea's Memory Game</title>
+    <style>
+      .title {
+        font-size: 2rem;
+        margin: 20px auto;
+        width: 300px;
+        color: blueviolet;
+        text-shadow: 2px 2px 2px yellow;
+        text-align: center;
+      }
+
+      .elementShap {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        margin: 5px;
+        border-radius: 10px;
+        transition: 1.5s;
+        transform-style: preserve-3d;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 550px;
+        margin: 0 auto;
+        margin-top: 100px;
+        perspective: 1000px;
+      }
+      .front,
+      .back {
+        backface-visibility: hidden;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .font {
+        position: absolute;
+        z-index: 2;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        background-color: purple;
+        transform: rotateY(0deg);
+        border-radius: 50%;
+        box-shadow: 3px 3px 3px yellow;
+      }
+      .back {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        background-color: yellow;
+        color: white;
+        transform: rotateY(180deg);
+        font-size: 3.5rem;
+        border: 3px solid yellow;
+      }
+
+      .card {
+        transform: rotateY(180deg);
+        transition: transform 600ms cubic-bezier(0.23, 0.885, 0.32, 2);
+      }
+      .flip-card {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-valid-match {
+        animation: cards-valid 800ms cubic-bezier(0.23, 0.885, 0.32, 1.5);
+      }
+
+      .flip-card-invalid-match {
+        animation: cards-invalid 800ms cubic-bezier(0.23, 0.885, 0.32, 1.5);
+      }
+
+      .card-back-match {
+        background-color: cyan;
+      }
+
+      .card-back-mismatch {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Bea's Memory Game</h1>
+    <h3 class="title">2019</h3>
+
+    <div id="conta" class="container"></div>
+    <script>
+      /*
+  Load Handler
+  1) Display JS-created cards with randomly shuffled emoji
+  2) Grab all created cards from the DOM, turn Nodelist into array
+  3) Call function add click handler to cards in DOM
+  4) Call functions to display initial player moves and star ratings
+  */
+
+      document.body.onload = flipCard; //load handler
+      //Tto execute a script once a web page has completely loaded all content.
+      let emojiArr = [
+        "💩",
+        "💩",
+        "🐞",
+        "🐞",
+        "🙄",
+        "🙄",
+        "👽",
+        "👽",
+        "🤑",
+        "🤑",
+        "🤷‍",
+        "🤷‍",
+        "🐼",
+        "🐼",
+        "🐤",
+        "🐤"
+      ]; //content of the memory cards
+      //another way: let emojiArr = [..."💩💩😹😹🙄🙄👽👽🤑🤑"];
+      let result = [];
+      function flipCard() {
+        let arr = shuffle(emojiArr); //shuffle to change the order of the objects in the array
+        //document.getElementById("conta").innerHTML = "";
+
+        //shuffle: Randomly shuffle the indexes of emojiArr
+        const createAndDisplayCards = shuffledEmojiArr => {
+          for (let i = 0; i < emojiArr.length; i++) {
+            const cardDiv = document.createElement("div");
+            const cardFront = document.createElement("div");
+            const cardBack = document.createElement("div");
+            cardDiv.className = "card";
+            cardFront.className = "front";
+            cardBack.className = "back";
+            cardBack.innerText = `${shuffledEmojiArr[i]}`;
+            cardDiv.append(cardFront, cardBack);
+            cardWrapper.append(cardDiv);
+          }
+        };
+
+        for (i = 0; i < arr.length; i++) {
+          document.getElementById("conta").innerHTML +=
+            `  <div id='flip` +
+            i +
+            `' class="elementShap" onclick="flipOn('flip` +
+            i +
+            `');">
+            <div class="font"></div>
+            <div class="back">` +
+            arr[i] +
+            `</div>
+            </div> `;
+        }
+      }
+      function flipOn(value) {
+        const element = document.getElementById(value);
+        if (element.className == "elementShap") {
+          element.classList.add("card");
+          result.push(value);
+        }
+        if (result.length > 1) {
+          let el1 = result[0];
+          let el2 = result[1];
+          if (
+            document.getElementById(el1).children[1].innerText ==
+            document.getElementById(el2).children[1].innerText
+          ) {
+            document.getElementById(el1).style.visibility = "hidden";
+            document.getElementById(el2).style.visibility = "hidden";
+          } else {
+            setTimeout(() => {
+              document.getElementById(el1).classList.remove("card");
+            }, 1000);
+            setTimeout(() => {
+              document.getElementById(el2).classList.remove("card");
+            }, 1000);
+          }
+          result = [];
+        }
+      }
+
+      function shuffle(arr) {
+        var ctr = arr.length,
+          temp,
+          index;
+
+        // While there are elements in the array
+        while (ctr > 0) {
+          // Pick a random index
+          index = Math.floor(Math.random() * ctr);
+          // Decrease ctr by 1
+          ctr--;
+          // And swap the last element with it
+          temp = arr[ctr];
+          arr[ctr] = arr[index];
+          arr[index] = temp;
+        }
+        return arr;
+      }
+
+      const cardsValidationAnimation = card => {
+        const cardBacks = document.querySelectorAll(".back");
+        cardBacks.forEach((cardback, i) => {
+          if (
+            cardback.closest(".flip-card") &&
+            matchingCards.includes(cardback.innerText) &&
+            tempOpenCards.length === 2
+          ) {
+            setTimeout(() => {
+              cardback.classList.add("card-back-match");
+              cardback
+                .closest(".flip-card")
+                .classList.add("flip-card-valid-match");
+            }, 500);
+          } else if (
+            cardback.closest(".flip-card") &&
+            !cardback.classList.contains("card-back-match")
+          ) {
+            setTimeout(() => {
+              cardback.classList.add("card-back-mismatch");
+              cardback
+                .closest(".flip-card")
+                .classList.add("flip-card-invalid-match");
+            }, 200);
+
+            setTimeout(() => {
+              cardback.classList.remove("card-back-mismatch");
+              cardback
+                .closest(".flip-card")
+                .classList.remove("flip-card-invalid-match");
+            }, 900);
+          }
+        });
+      };
+
+      const cardsDontMatch = card => {
+        cardsValidationAnimation(card);
+        clearTempArr();
+        displayPlayerMoves(false);
+        setTimeout(() => {
+          removeCardFlipClass();
+        }, 500);
+        resetCardClicks();
+        clearCardIndexesArr();
+      };
+
+      const removeCardFlipClass = () => {
+        cardsArr.forEach(card => {
+          !matchingCards.includes(card.innerText)
+            ? card.classList.remove("flip-card")
+            : null;
+        });
+      };
+    </script>
+  </body>
+</html>
+
+<!-- <div class="elementShap" onclick="flip();">
+            <div class="font">font</div>
+            <div class="back">back</div>
+        </div> -->
