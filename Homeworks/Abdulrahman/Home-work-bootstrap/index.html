@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        article.card{
+            height: 280px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container m-auto row justify-content-around align-items-center ">
+        <a class="link col-5 text-muted" href="#">Subscribe</a>
+        <a class="nav-link col-4 h1 text-dark font-weight-bold" href="#" class="logo">Large</a>
+        <a class="nav-link text-muted" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+        </a>
+        <button class="btn btn-outline-secondary">Sign up</button>
+    </nav>
+    <hr class="container">
+    <header class="container ">
+        <ul class="nav justify-content-center">
+            <li><a class="nav-link text-muted" href="#">World</a></li>
+            <li><a class="nav-link text-muted" href="#">U.S</a></li>
+            <li><a class="nav-link text-muted" href="#">Technology</a></li>
+            <li><a class="nav-link text-muted" href="#">Design</a></li>
+            <li><a class="nav-link text-muted" href="#">Culture</a></li>
+            <li><a class="nav-link text-muted" href="#">Business</a></li>
+            <li><a class="nav-link text-muted" href="#">Politics</a></li>
+            <li><a class="nav-link text-muted" href="#">Opinion</a></li>
+            <li><a class="nav-link text-muted" href="#">Science</a></li>
+            <li><a class="nav-link text-muted" href="#">Health</a></li>
+            <li><a class="nav-link text-muted" href="#">Style</a></li>
+            <li><a class="nav-link text-muted" href="#">Travel</a></li>
+        </ul>
+    </header>
+    <section class="jumbotron container bg-dark text-white">
+        <h1 class="display-4 font-italic col-6 font-weight-bold">Title of a longer featured blog post</h1>
+        <p class="h5 col-5 my-4 ">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+        <a class="text-white h4 col-2" href="#">Continue reading...</a>
+    </section>
+    <section class="container row m-auto justify-content-between">
+        <article class="card col-6 row flex-row p-0">
+            <div class="card-body col-6">
+                <span class="text-primary font-weight-bold my-3">World</span>
+                <h3 class="font-weight-bold card-title">Featured post</h3>
+                <span class="text-muted">Nov 12</span>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro reiciendis corporis inventore, doloribus beatae ea.</p>
+                <a href="#">Continue reading..</a>
+            </div>
+            <img class="card-img offset-1 col-5 p-0" src="https://dummyimage.com/200x250/000/fff" alt="">
+        </article>
+        <article class="card col-6 row flex-row p-0">
+            <div class="card-body col-6">
+                <span class="text-success font-weight-bold my-3">Design</span>
+                <h3 class="font-weight-bold card-title">Post title</h3>
+                <span class="text-muted">Nov 11</span>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro reiciendis corporis inventore, doloribus beatae ea.</p>
+                <a href="#">Continue reading..</a>
+            </div>
+            <img class="card-img offset-1 col-5 p-0" src="https://dummyimage.com/200x250/000/fff" alt="">
+        </article>
+    </section>
+    <section class="container row ml-auto mr-auto mt-5 p-0">
+        <main class="col-7 p-0">
+            <header class="row">
+                <h2 class="font-weight-bold font-italic pl-2">From the Firehose</h2>
+            </header>
+            <hr class="container">
+            <h1 class="font-weight-bold">Sample blog post</h1>
+            <span class="text-muted">January 1, 2014 by <a class="link" href="#">Mark</a></span>
+            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <hr>
+            <p>Cum sociis natoque penatibus et magnis <a class="link" href="#">dis parturient montes</a> , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>Curabitur blandit tempus porttitor. <span class="font-weight-bold">Nullam quis risus eget urna mollis</span> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h1 class="font-weight-bold">Heading</h1>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <h1 class="font-weight-bold">Sub-heading</h1>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                <span class="my-4"> Example code block </span>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <h1 class="font-weight-bold">Sub-heading</h1>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Donec id elit non mi porta gravida at eget metus.</li>
+                <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p class="m-4">Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <ol>
+                <li>Vestibulum id ligula porta felis euismod semper.</li>
+                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol>
+            <p class="my-4">Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            <h1 class="font-weight-bold mt-4">Another blog post</h1>
+            <span class="text-muted">December 23, 2013 by <a class="link" href="#">Jacob</a></span>
+            <p>Cum sociis natoque penatibus et magnis <a class="link" href="#">dis parturient montes</a> , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>Curabitur blandit tempus porttitor. <span class="font-weight-bold">Nullam quis risus eget urna mollis</span> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <h1 class="font-weight-bold mt-4">New feature</h1>
+            <span class="text-muted">December 14, 2013 by <a class="link" href="#">Chris</a></span>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Donec id elit non mi porta gravida at eget metus.</li>
+                <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <button class="btn btn-outline-primary rounded-pill">Older</button>
+            <button class="btn btn-outline-dark disabled rounded-pill">Newer</button>
+        </main>
+        <aside class="offset-1 col-4 p-0">
+            <article class="jumbotron">
+                <h2 class="font-weight-bold font-italic">About</h2>
+                <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            </article>
+            <h2 class="font-weight-bold font-italic">Archives</h2>
+            <ul class="list-unstyled">
+                <li><a class="link" href="#">March 2014</a></li>
+                <li><a class="link" href="#">February 2014</a></li>
+                <li><a class="link" href="#">January 2014</a></li>
+                <li><a class="link" href="#">December 2013</a></li>
+                <li><a class="link" href="#">November 2013</a></li>
+                <li><a class="link" href="#">October 2013</a></li>
+                <li><a class="link" href="#">September 2013</a></li>
+                <li><a class="link" href="#">August 2013</a></li>
+                <li><a class="link" href="#">July 2013</a></li>
+                <li><a class="link" href="#">June 2013</a></li>
+                <li><a class="link" href="#">May 2013</a></li>
+                <li><a class="link" href="#">April 2013</a></li>
+            </ul>
+            <h2 class="font-weight-bold font-italic">Elsewhere</h2>
+            <ul class="list-unstyled">
+                <li><a class="link" href="#">GitHub</a></li>
+                <li><a class="link" href="#">Twitter</a></li>
+                <li><a class="link" href="#">Facebook</a></li>
+            </ul>
+        </aside>
+    </section>
+    <hr class="mt-5 mb-5">
+    <footer class="text-center bg-white px-4">
+        <p class="text-muted">Blog template built for <a class="link" href="#">Bootstrap</a> by <a class="link" href="#">@mdo</a> .</p>
+        <a class="pb-5" href="#">Back to top</a>
+    </footer>
+</body>
+</html>

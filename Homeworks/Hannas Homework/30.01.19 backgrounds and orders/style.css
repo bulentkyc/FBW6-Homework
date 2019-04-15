@@ -1,0 +1,210 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+div {
+    width: 60%;
+    height: 617px;
+    margin-left: 20%;
+    display: inline-block;
+    border:10px solid rgba(10, 48, 185, 0.4);
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.trans-bg {
+    border: 2px solid black;
+}
+
+.fav-bg {
+    background-color: #1A5276;
+}
+
+.fv-bg {
+    background-color: rgb(27, 38, 49);
+}
+
+.img-bg {
+    background-image: url("http://lorempixel.com/200/300");
+}
+
+.img-bg2 {
+    background-image: url("http://lorempixel.com/250/300");
+}
+
+.img-bg-comp {
+    background-image: url("../../chibi.png");
+    background-size: 20%;
+}
+    
+.img-bg-gradient{
+    background-image: linear-gradient(black, gold , red);
+
+}
+
+.img-bg-gradient-tr{
+    background-image: linear-gradient(to right, black, gold , red);
+
+}
+
+.img-bg-gradient-trb{
+    background-image: linear-gradient(to right bottom, black, gold , red);
+
+}
+
+.img-bg-gradient-radial{
+    background-image: radial-gradient( black, gold , red);
+
+}
+
+.img-bg-gradient-rainbow{
+    background-image: linear-gradient(to right, violet, indigo, blue, brown, green, yellow,orange,red);
+
+}
+
+.img-bg-gradient-rainbow{
+    background-image: repeating-radial-gradient( violet 3%, indigo 5%, blue 7%, brown 8%, green 10%, yellow 11%,orange 12%,red 15%);
+
+}
+
+.img-bg-gradient-rainbow-rad-sha{
+    background-image: repeating-radial-gradient(circle, violet 3%, indigo 5%, blue 7%, brown 8%, green 10%, yellow 11%,orange 12%,red 15%);
+
+}
+
+.img-bg-gradient-rainbow-rad-origin{
+    background-image: repeating-radial-gradient(circle closest-side at 70% 55%, violet 3%, indigo 5%, blue 7%, brown 8%, green 10%, yellow 11%,orange 12%,red 15%);
+}
+
+
+    .expand{
+        height: 400px;
+        width: 100%;
+        border-color: transparent;
+    }
+
+    .img-bg-web{
+        background-image:  url("../../1546954523-141374-zoom-500x600.jpg");
+        background-size: 20%;
+    }
+
+    .fixed{
+
+        background-attachment: fixed;
+    }
+
+    .scrool{
+        overflow-y: scroll;
+        background-attachment: scroll;
+        
+    }
+
+    .local{
+        overflow-y: scroll;
+        background-attachment: local;
+        
+    }
+
+
+    .bg-clip-bb {
+        background-clip: border-box;
+
+    }
+
+
+    .bg-clip-pb {
+        background-clip: padding-box;
+        overflow: hidden;
+    }
+
+    .bg-clip-cb {
+        background-clip: content-box;
+        padding: 20px;
+        overflow: hidden;
+    }
+    
+    .bg-blue{
+        background-color: blue;
+    }
+
+    .bg-origin-bb {
+        background-origin: border-box;
+        background-repeat: no-repeat;
+
+    }
+
+
+    .bg-origin-pb {
+        background-origin: padding-box;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+
+    .bg-origin-cb {
+        background-origin: content-box;
+        padding: 20px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    
+    .bg-blue{
+        background-color: blue;
+    }
+
+    .bg-rp-rp{
+        background-repeat: repeat;
+    }
+
+    .bg-rp-rp-x{
+        background-repeat: repeat-x;
+    }
+
+    .bg-rp-rp-y{
+        background-repeat: repeat-y;
+        overflow-y: scroll;
+    }
+
+    .bg-rp-ro{
+        background-repeat: round;
+    }
+
+    .bg-rp-sp{
+        background-repeat: space;
+    }
+
+    .bg-sz-auto{
+        background-size: auto;
+        background-repeat: no-repeat;
+
+    }
+    .bg-sz-wh{
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+
+    }
+
+    .bg-sz-cv{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .bg-sz-cn{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+/*This is the Homework css*/
+
+.bg-home{
+
+    background-image:url("http://lorempixel.com/150/150"), url("http://lorempixel.com/200/150");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: left top, right bottom;
+    border:53px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(45deg, green, green 1.5%,transparent 1.5%, transparent 3% ) 6%;
+}

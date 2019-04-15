@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        /* .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ */
+        body{
+          margin: 0;
+          font-size: 20px;
+          font-family: 'Roboto', sans-serif;
+        }
+        figure{
+          margin: 0;
+        }
+        h1{
+          font-size: 1.5em;
+        }
+        p{
+          font-size: 1em;
+        }
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }
+        
+        header {
+          background-color: rgba(35, 6, 114, 0.4);
+          color: #333;
+          display: inline-block;
+          align-items: center;
+          min-height: 150px;
+          text-align: center;
+          width: 100%;
+          margin: 0;
+          right: 0;
+          left: 0;
+        }
+        .logo h1{
+          border: 2px solid rgba(35, 6, 114, 0.4);
+        }
+        ul{
+            list-style-type: none;
+            padding: 10px;
+        }
+        nav ul {
+          list-style-type: none;
+          display: inline-flex;
+          width: 100%;
+          justify-content: space-evenly;
+        }
+        
+        nav li a{
+         display: inline-block;
+          color: #333;
+          margin:5px;
+          /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+          justify-content: space-evenly;
+          font-size: 1em;
+          text-decoration-line: none;
+        }
+        
+        nav li a:hover {
+          background-color: #dbe4e7;
+        }
+        img{
+            box-shadow: 0 7px 7px rgba(35, 6, 114, 0.6);
+            object-fit: contain;
+            width: 100%;
+        }
+        aside ul li {
+          background-color: #333;
+          color: #ffffff;
+          font-size: 20px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          padding: 5%;
+        }
+        .topnav .icon {
+        display: none;
+        }
+
+        main{
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        
+        footer {
+          background-color: rgba(35, 6, 114, 0.4);
+          color: #333;
+          display: inline-block;
+          align-items: center;
+          min-height: 50px;
+          text-align: center;
+          width: 100%;
+          margin: 0;
+          right: 0;
+          left: 0;
+        }
+        
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+          
+        }
+        @media  (max-width: 600px) {
+        nav {
+        display: none;
+          }
+        }
+        @media only screen and (min-width: 600px) {
+          /* For tablets: */
+          .col-s-1 {width: 8.33%;}
+          .col-s-2 {width: 16.66%;}
+          .col-s-3 {width: 25%;}
+          .col-s-4 {width: 33.33%;}
+          .col-s-5 {width: 41.66%;}
+          .col-s-6 {width: 50%;}
+          .col-s-7 {width: 58.33%;}
+          .col-s-8 {width: 66.66%;}
+          .col-s-9 {width: 75%;}
+          .col-s-10 {width: 83.33%;}
+          .col-s-11 {width: 91.66%;}
+          .col-s-12 {width: 100%;}
+
+          nav li a{
+          margin-bottom: 30px;
+          }
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            display: none;
+          }
+
+        }
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+
+          .topnav a:not(:first-child){
+            display: none;
+            }
+          .topnav a.icon {
+            display: none;
+          }
+          .topnav{
+            display: none;
+          }
+        }
+
+
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
+
+        </style>
+</head>
+<body>
+    <header>
+        <div class="col-4 col-s-6 logo"><h1>E<sub>B</sub></h1></div>
+        <div class="col-4 col-s-6"><h2>Web Developer</h2></div>
+        <!-- <div class="col-s-12"><hr></div> -->
+        <nav class="col-4 col-s-12">
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="topnav col-" id="myTopnav">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </header>
+    <main class="col-12">
+        <aside class="col-3 col-s-4 menu">
+            <ul>
+              <li>HTML5</li>
+              <hr>
+              <li>CSS3</li>
+              <hr>
+              <li>BOOTSTRAP</li>
+              <hr>
+              <li>JS</li>
+            </ul>
+        </aside>
+        <div class="col-6 col-s-8">
+            <h1>Düsseldorf Based - World Oriented</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, cum! Possimus ullam quisquam quos minima obcaecati autem, dicta, quas voluptates consectetur voluptas aliquam libero labore. Voluptatum eaque cupiditate distinctio exercitationem?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, cum! Possimus ullam quisquam quos minima obcaecati autem, dicta, quas voluptates consectetur voluptas aliquam libero labore. Voluptatum eaque cupiditate distinctio exercitationem?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, cum! Possimus ullam quisquam quos minima obcaecati autem, dicta, quas voluptates consectetur voluptas aliquam libero labore. Voluptatum eaque cupiditate distinctio exercitationem?</p>
+        </div>
+        <!-- <div class="col-s-12"><hr></div> -->
+        <div class="col-3 col-s-12">
+            <figure>
+                <img src="img/enri-git.png" alt="">
+            </figure>
+        </div>
+    </main>
+    <div></div>
+    <footer><p>Made with...funny</p></footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+</body>
+</html>

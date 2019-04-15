@@ -1,0 +1,135 @@
+body {
+  color: #666;
+  font-family: "sans", Arial;
+  font-weight: 300;
+  max-width: 1280px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+hr {
+  color: #9999;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  width: 9vw;
+}
+header form {
+  display: inline-block;
+  width: 100%;
+}
+header form button {
+  border: none;
+  line-height: 0;
+  background-color: transparent;
+}
+header form input[type=text] {
+  background: transparent;
+  line-height: 1.5;
+  padding: 10px 0 9px 8px;
+  box-shadow: none;
+  border: 1px solid #ddd;
+  width: 50%;
+}
+header form select {
+  border: 1px solid #ddd;
+  border-left-color: #efefef;
+  padding: 0 10px;
+  width: 200px;
+  height: 44px;
+  background: #fff;
+  border-radius: 0 3px 3px 0;
+  margin: 0;
+}
+header form input[type=submit] {
+  width: 90px;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  text-decoration: none;
+  background: #00509d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0079bc), to(#00509d));
+  height: 42px;
+}
+header form a {
+  margin-left: 10px;
+}
+
+nav ol li {
+  display: inline-flex;
+  left: 0;
+}
+
+aside {
+  display: inline-block;
+  width: 17vw;
+}
+aside ul li {
+  padding: 4px;
+}
+
+main {
+  display: inline-flex;
+  flex-direction: column;
+  float: right;
+  max-width: 937px;
+}
+main div {
+  display: inline-flex;
+  border: 0.5px solid #9999;
+  margin: 10px;
+}
+main div .first-con {
+  background-color: #659EFF;
+  color: #121258;
+  width: 30%;
+}
+main div .first-con h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 3%;
+}
+main div .first-con P {
+  padding: 3%;
+}
+main div .first-con a {
+  font-size: 1rem;
+  border-radius: 0;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: -10px;
+}
+main div figure {
+  margin: 0;
+  padding: 0;
+}
+main div figure img {
+  width: 34vw;
+  height: 35vh;
+  object-fit: cover;
+  margin-bottom: -5px;
+}
+
+/*# sourceMappingURL=main.css.map */

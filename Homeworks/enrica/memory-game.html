@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <style>
+        /* section{
+            width: 220px;
+            height: 180px;
+            border: 2px black solid;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        div{
+           border:1px black solid;
+           width: 50px;
+            height: 50px;
+            border-radius: 5px; 
+        } */
+        body {
+	margin: 0;
+	font-family: sans-serif;
+	transition: .6s;
+}
+
+#winScreen {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	transition: background .4s;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#winScreen p {
+	color: white;
+	font-size: 60px;
+	transform: translateY(-70vh);
+	user-select: none;
+	text-shadow: 2px 2px 0 black;
+	animation: textDrop 2s;
+}
+
+#intro, #game {
+	width: 95%;
+	text-align: center;
+	margin: 10px auto 0 auto;
+	border: 1px solid black;
+	border-radius: 20px;
+
+}
+
+#intro span {
+	color: brown;
+	text-shadow:
+		1px 1px black,
+		1px -1px black,
+		-1px 1px black,
+		-1px -1px black;
+}
+
+#game {
+	min-height: 450px;
+	margin-bottom: 10px;
+}
+
+#settings {
+	font-size: 22px;
+	background: rgba(0, 0, 0, .2);
+	width: 300px;
+	margin: 20px auto;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+#settings button {
+	width: 60px;
+	height: 26px;
+	cursor: pointer;
+}
+
+#play-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tile {
+	height: 110px;
+	width: 110px;
+	margin: 20px;
+	border: 1px solid;
+	background: linear-gradient(rgba(255, 0, 0, .6), brown);
+	cursor: pointer;
+}
+
+.tile p {
+	font-size: 30px;
+	margin: 0;
+	padding: 35%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: blur(20px);
+	user-select: none;
+}
+
+.matched {
+	border-radius: 50%;
+	transition: 1s;
+	background: blue;
+}
+
+.matched p {
+	filter: blur(0px);
+}
+
+
+@keyframes textDrop {
+	0% {
+		transform: translateY(-70vh);
+	}
+	10% {
+		transform: translateY(-12vh);
+	}
+	90% {
+		transform: translateY(12vh);
+	}
+	100% {
+		transform: translateY(110vh);
+	}
+}
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div> -->
+
+        <div id="container">
+                <div id="intro">
+                    <h1>Memory Game</h1>
+                </div>
+                <div id="game">
+                    <div id="settings">
+                        <p>Number of tiles (<span>10</span>)</p>
+                        <input type="range" value="10" min="10" max="30" step="2">
+                        <button name="reset">Reset</button>
+                        <button name="start">Start</button>
+                    </div>
+                    
+                    <div id="play-area"></div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <script>
+    
+    /*const numApp = document.querySelectorAll('div');
+    var numbFirst=[];    
+    var numbSecond=[]; 
+
+    for(i=0; i<=5;i++){
+        numApp[i].innerHTML = Math.floor(Math.random()*6)+1;
+        
+        if (numApp[i] === numbFirst.length){
+            numApp[i].innerHTML = Math.floor(Math.random()*6)+1;
+        } 
+        else{
+            numbFirst.push[i]; 
+        }  
+    }
+   
+     for (i=6; i<=11; i++){
+        numApp[i].innerHTML = Math.floor(Math.random()*6)+1);
+        
+        
+        if(numbSecond === numbSecond.length){
+            numApp[i].innerHTML = Math.floor(Math.random()*6)+1; 
+        } 
+        else{
+            numbSecond.push[i];
+        }  
+    }  */
+    window.onload = function () {
+	// Fade in the body
+	document.querySelector('body').style.opacity = 0;
+
+	setTimeout(() => {
+		document.querySelector('body').style.opacity = 1;
+	});
+
+
+	const body = document.querySelector('body'),
+		tilesNumber = document.querySelector('#settings p span'),
+		tilesInput = document.querySelector('#settings input'),
+		startBtn = document.querySelector('#settings button[name=start]'),
+		resetBtn = document.querySelector('#settings button[name=reset]'),
+		playArea = document.querySelector('#play-area');
+
+
+	tilesInput.addEventListener('input', () => {
+		tilesNumber.innerHTML = tilesInput.value;
+	});
+
+	resetBtn.addEventListener('click', () => {
+		startBtn.removeAttribute('disabled', '');
+		tilesInput.removeAttribute('disabled', '');
+		playArea.innerHTML = '';
+	});
+
+	startBtn.addEventListener('click', () => {
+		startBtn.setAttribute('disabled', '');
+		tilesInput.setAttribute('disabled', '');
+
+		// Create tiles
+		for (let i = 0; i < tilesInput.value; i++) {
+			playArea.innerHTML += '<div class="tile"><p></p></div>';
+		}
+
+		// Push to `numsToAssign` all the numbers from 0 to `tilesInput / 2`
+		var numsToAssign = [];
+
+		for (let i = 0; i < tilesInput.value / 2; i++) {
+			numsToAssign.push(i, i);
+		}
+
+		// Assign each number of `numsToAssign` to each tile randomly
+		var randomNum = Math.floor(Math.random() * tilesInput.value);
+		var randomTile = document.querySelectorAll('.tile p')[randomNum];
+
+		for (let i = 0; i < tilesInput.value; i++) {
+			do {
+				if (!randomTile.innerHTML) {
+					randomTile.innerHTML = numsToAssign.shift();
+				}
+
+				randomNum = Math.floor(Math.random() * tilesInput.value);
+				randomTile = document.querySelectorAll('.tile p')[randomNum];
+			} while (randomTile.innerHTML && numsToAssign.length > 0)
+		}
+
+		startGame();
+	});
+
+
+	function startGame() {
+		let tiles = document.querySelectorAll('.tile');
+		let firstClickedTile;
+		let secondClickedTile;
+
+		// Add click event for every tile
+		for (let i = 0; i < tiles.length; i++) {
+			tiles[i].addEventListener('click', matching);
+		}
+
+		function matching(e) {
+			if (!firstClickedTile) {
+				firstClickedTile = e.target.parentNode;
+				firstClickedTile.firstChild.style.filter = 'blur(0px)';
+			} else if (e.target.parentNode !== firstClickedTile) {
+				secondClickedTile = e.target.parentNode;
+				secondClickedTile.firstChild.style.filter = 'blur(0px)'
+
+				/*
+				If the tiles match:
+				 - add 'matched' class to the matched tiles;
+				 - remove the click event for the matched tiles;
+				 - remove blur for the matched tiles;
+				Else keep the blur.
+				*/
+
+				if (firstClickedTile.firstChild.innerText == secondClickedTile.firstChild.innerText) {
+					firstClickedTile.classList.add('matched');
+					secondClickedTile.classList.add('matched');
+
+					firstClickedTile.removeEventListener('click', matching);
+					secondClickedTile.removeEventListener('click', matching);
+
+					firstClickedTile.firstChild.style.filter = 'blur(0px)';
+					secondClickedTile.firstChild.style.filter = 'blur(0px)';
+
+					tilesClickDelayAndWinCheck();
+				} else {
+					setTimeout(() => {
+						firstClickedTile.firstChild.style.filter = 'blur(15px)';
+						secondClickedTile.firstChild.style.filter = 'blur(15px)';
+					}, 400);
+
+					tilesClickDelayAndWinCheck();
+				}
+
+				setTimeout(() => {
+					firstClickedTile = undefined;
+				}, 400);
+			}
+		}
+
+		// Removes click events on tiles to be able to see the second tile, then adds events back.
+		function tilesClickDelayAndWinCheck() {
+			let notMatchedTiles = 0;
+
+			for (let i = 0; i < tiles.length; i++) {
+				tiles[i].removeEventListener('click', matching);
+
+				if (!tiles[i].classList.contains('matched')) {
+					notMatchedTiles++;
+				}
+			}
+
+			if (notMatchedTiles === 0) {
+				console.log('You won!');
+				winMenu();
+				return;
+			}
+
+			setTimeout(() => {
+				for (let i = 0; i < tiles.length; i++) {
+					tiles[i].addEventListener('click', matching);
+				}
+			}, 400);
+		}
+
+		function winMenu() {
+			body.innerHTML += '<div id="winScreen"></div>';
+			document.querySelector('#winScreen').innerHTML = '<p>You won!</p>';
+
+			setTimeout(() => {
+				document.querySelector('#winScreen').style.background = 'rgba(0, 0, 0, .7)';
+			}, 100);
+			
+			setTimeout(() => {
+				body.removeChild(document.querySelector('#winScreen'));
+			}, 2000);
+		}
+		
+	}
+}
+
+    </script>
+
+</body>
+</html>

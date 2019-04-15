@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="row mx-3 my-2 align-items-center justify-content-around">
+            <div class="row align-items-center">
+                <span class="dot"></span>
+                <a class="h3 logo" href="#">Logo</a>
+                <span class="dot"></span>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <p class="my-0">Doctors</p>
+                    <small class="text-muted">Book an appointment</small>
+                </a></li>
+                <li class="nav-item">
+                    <a class="nav-link myActive" href="#">
+                        <p  class="my-0">Chat</p>
+                        <small class="text-muted">Chat with top doctors</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <p  class="my-0">Pharmacy</p>
+                        <small class="text-muted">Medicines & health products</small>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <p  class="my-0">Diagnostics</p>
+                        <small class="text-muted">Book tests & checkups</small>
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex ">
+            <div class="dropdown px-2">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    For Providers
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </div>
+            <div class="dropdown px-2">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    For Providers
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <a class=" btn Mybtn-Orange" href="#">Login / Signup</a>
+        </div>
+        </nav>
+        <section id="slider" class="mt-3">
+            <div id="carouselExampleSlidesOnly" class="carousel slide  d-flex" data-ride="carousel">
+                <div class="w-50 pl-5">
+                    <div class="text-white mt-5 pl-5 pt-5">
+                        <h2 class="h1 py-3">Talk to a doctor from</h2>
+                        <p>Chat privately with top doctors,
+                                fees starting at $14.99 $20</p>
+                        <a class="btn Mybtn-Orange col-3 d-block mt-3 mb-5" href="#">Chat Now</a>
+                        <small>50,000+ Happy Users • Privacy Guaranteed</small>
+                    </div>
+                </div>
+                <div class="carousel-inner w-50">
+                  <div class="carousel-item active firstimage">
+                  </div>
+                  <div class="carousel-item secimage">
+                    </div>
+                    <div class="carousel-item thridimag">
+                    </div>
+                </div>
+              </div>
+        </section>
+    </header>
+    <main>
+        <section id="firstSection" class="text-center">
+            <h2 class="h1 mt-5 py-5 font-weight-bold">Here'How it works:</h2>
+            <div class="row col-10 mx-auto mb-4 no-gutters flex-nowrap justify-content-around">
+                <div class="col-3">
+                    <div class="col-4 p-3 mx-auto h1 font-weight-bold myNumBox">1</div>
+                    <p class="h4 font-weight-bold my-4">Explain your health concern</p>
+                    <p>This helps us suggest the doctor specializations most suited to address your concern.</p>
+                </div>
+                <div class="col-3">
+                    <div class="col-4 p-3 mx-auto h1 font-weight-bold myNumBox">2</div>
+                    <p class="h4 font-weight-bold my-4">Always affordable</p>
+                    <p>Pay upto 50% lesser fees than physical appointments. With fees starting at just $14.99 $20, your consultation is always affordable.</p>
+                </div>
+                <div class="col-3">
+                    <div class="col-4 p-3 mx-auto h1 font-weight-bold myNumBox">3</div>
+                    <p class="h4 font-weight-bold my-4">Free Followups</p>
+                    <p>Ask your followup questions for free, upto 3 days after the chat ends.</p>
+                </div>
+            </div>
+            <p><small class="text-muted">Note: Not for emergency use</small></p>
+        </section>
+        <section id="secSection" class="">
+            <h2 class="h1 text-center">Get an expert opinion on anything:</h2>
+            <label class="d-flex justify-content-center align-items-center my-4">
+                <input class="form-control col-5" type="search">
+                <i class="fas fa-search h4 mb-0"></i>
+            </label>
+            <div class="row justify-content-center no-gutters pb-4">
+                <ul class="list-unstyled mr-5">
+                    <li class="row mx-0 align-items-center mb-4"><i class="fas fa-american-sign-language-interpreting h2 p-3"></i><p>What causes sagging testicles?</p></li>
+                    <li class="row mx-0 align-items-center mb-4"><i class="far fa-angry  h2  p-3"></i><p>Medicine to get periods immediately</p></li>
+                    <li class="row mx-0 align-items-center mb-4"><i class="fas fa-asterisk  h2  p-3"></i><p>Want advise on Men's Sexual Health?</p></li>
+                </ul>
+                <ul class="list-unstyled ">
+                    <li class="row mx-0 align-items-center mb-4"><i class="fab fa-alipay  h2  p-3"></i><p>Hiccups after wisdom teeth surgery</p></li>
+                    <li class="row mx-0 align-items-center mb-4"><i class="fab fa-accusoft h2  p-3"></i><p>Fever only head is hot</p></li>
+                    <li class="row mx-0 align-items-center mb-4"><i class="fab fa-affiliatetheme  h2  p-3"></i><p>Troubled with Bruising?</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="thirdSection ">
+            <h2 class="text-center h1">Hear what our users have to say</h2>
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                        <div class="m-5 p-5">
+                            <p class="h3 pl-4">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <small class="ml-5">First slide label</small>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <div class="m-5 mr-0 p-5">
+                            <p class="h3 pl-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <small class="ml-5">Second slide label</small>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <div class="m-5 mr-0 p-5">
+                            <p class="h3 pl-4">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <small class="ml-5">Third slide label</small>
+                        </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon anothericonleft" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+        </section>
+        <section id="fousection" class="border-bottom pb-5">
+            <h2 class="h2 text-center font-weight-bold mb-5">Let’s clear those doubts</h2>
+            <div class="row no-gutters align-items-center">
+                <div class="accordion col-7" id="accordionExample">
+                    <div class="border-bottom">
+                      <div class="Mycard-header  borderraduis" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What happens if I don’t get a response?
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            You are assured a response on Consult, and not just that, most doctors respond within 5 minutes to your consultation. In the super rare case that the doctor doesn't respond at all, the money is automatically refunded to your account.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-bottom">
+                      <div class="Mycard-header " id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Will the doctor be able to solve my medical issue?
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                          
+                            Our doctors will give you a qualified opinion on your health issue and help you identify next steps which may include further tests, a prescription or lifestyle tips. On the off chance that our doctors can’t form a conclusive diagnosis without a physical examination, they will cancel the consultation & refund your money.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-bottom">
+                      <div class="Mycard-header" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn  text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I ask a doctor a medical question for free?
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            We have the free questions service available on our app only. Please download our app and log in to ask a free health question to doctors. Doctors usually respond within 24 to 48 hours of you posting your query.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-bottom">
+                        <div class="Mycard-header" id="headingfou">
+                            <h2 class="mb-0">
+                            <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapsefou" aria-expanded="false" aria-controls="collapsefou">
+                                Can I ask a doctor a medical question for free?
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapsefou" class="collapse" aria-labelledby="headingfou" data-parent="#accordionExample">
+                            <div class="card-body">
+                                We have the free questions service available on our app only. Please download our app and log in to ask a free health question to doctors. Doctors usually respond within 24 to 48 hours of you posting your query.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Mycard-header" id="headingfov">
+                            <h2 class="mb-0">
+                            <button class="btn text-white  collapsed" type="button" data-toggle="collapse" data-target="#collapsefov" aria-expanded="false" aria-controls="collapsefov">
+                                    What’s your money back policy?
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapsefov" class="collapse" aria-labelledby="headingfov" data-parent="#accordionExample">
+                            <div class="card-body">
+                                
+                                We have a ‘worry-free’ refund policy. If for any reason you’re not satisfied with your online consultation, simply reach out to us on team-consult@practo.com and we’ll refund your money.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-1 col-4">
+                    <img src="assets/img/detective-1424831_1280.png" class="img-fluid" alt="question">
+                </div>
+            </div>
+        </section>
+        <section id="fifthsection" class="p-4">
+            <div class="row no-gutters  align-items-center">
+                <div class="w-50">
+                    <img src="assets/img/mobile-devices-2017981.svg" class="img-fluid"  alt="">
+                </div>
+                <div class="w-50">
+                    <h2 class="font-weight-bold mb-4">Consult on the go.</h2>
+                    <p class="col-8  px-0">Get Practo app for a seamless online consultation experience and much more.</p>
+                    <a class="btn Mybtn-Orange my-4" href="#">Find out more</a>
+                    <h3>Download the app here</h3>
+                    <div>
+                        <a href="#"><img class="col-5" src="assets/img/google-play-badge.png" alt="google play"></a>
+                        <a href="#"><img class="col-4"  src="assets/img/applestore.svg" alt="google play"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-white py-5 px-2">
+        <div class="row no-gutters justify-content-around">
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">Practo</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Career</li>
+                <li>Press</li>
+                <li>Contact</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">For patients</li>
+                <li>Ask free health questions</li>
+                <li>Search for doctors</li>
+                <li>Search for clinics</li>
+                <li>Search for hospitals</li>
+                <li>Search for diagnostics</li>
+                <li>Read health articles</li>
+                <li>Read about medicines</li>
+                <li>Consult a Doctor</li>
+                <li>Order medicines</li>
+                <li>Practo Drive</li>
+                <li>Health app</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">For doctors</li>
+                <li>Practo Consult</li>
+                <li>Practo Health Feed</li>
+                <li>Practo Profile</li>
+                <li class="font-weight-bold my-2">For clinics</li>
+                <li>Ray by Practo</li>
+                <li>Practo Reach</li>
+                <li>Ray Tab</li>
+                <li>Practo Pro</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">For hospitals</li>
+                <li>Insta by Practo</li>
+                <li>Qikwell by Practo</li>
+                <li>Querent by Practo</li>
+                <li>Practo Profile</li>
+                <li>Practo Reach</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">More</li>
+                <li>Help</li>
+                <li>Developers</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Subscribers</li>
+                <li>Healthcare directory</li>
+                <li>Practo Health Wiki</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li class="font-weight-bold mb-2">Social</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+                <li>Youtube</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <div class="row align-items-center justify-content-center">
+                <span class="dot"></span>
+                <a class="h1 text-white logo d-block mb-2" href="#">Logo</a>
+                <span class="dot"></span>
+            </div>
+            <p><small>Copyright © 2017, Practo. All rights reserved.</small></p>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

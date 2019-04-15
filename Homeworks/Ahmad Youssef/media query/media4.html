@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            font-size: 20px;
+            
+        }
+        header{
+            background-color: rgb(133, 0, 0);
+            display: flex;
+            justify-content: space-between;
+        }
+        header a{
+            font-size: 1.2em;
+            display: block;
+            text-decoration: none;
+            color:#fff;
+            padding: 20px;
+        }
+        nav  input[type="checkbox"],label{
+            display: none;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            padding:10px;
+            margin: 0;
+        }
+        nav a{
+            font-size: 1em;
+            padding: 10px 20px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .container aside{
+            width: 20%;
+            background-color: rgba(128, 128, 128, 0.411);
+        }
+        .container aside ul{
+            list-style: none;
+            padding: 0;
+        }
+        .container aside ul li{
+            padding: 10px 40px;
+        }
+        .container aside ul li:hover{
+            background-color: brown;
+        }
+
+        .container main{
+            display: flex;
+            width: 75%;
+            justify-content: space-between;
+
+        }
+        .container main section{
+            width: 30%;
+        }
+        footer{
+            padding: 40px;
+            background-color: rgb(133, 0, 0);
+            color: white;
+            text-align: center;
+        }
+        @media only screen and (max-width: 800px) {
+            .container main{
+                flex-wrap: wrap;
+            }
+            .container main section{
+                width: 48%;
+            }
+            .container main section:last-of-type{
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            label{
+                display: block;
+                font-size: 30px;
+                text-align: right;
+                padding: 20px;
+                color: #fff;
+            }
+            nav{
+                position: relative;
+                width: 50%;
+            }
+            nav ul{
+                flex-direction: column;
+                align-items: flex-end;
+                position: absolute;
+                right: 0;
+                display: none;
+                background-color: rgb(133, 0, 0);
+            }
+            nav input:checked + ul{
+                display: block;
+            }
+            .container main {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .container main section{
+                width: 100%;
+            }
+            .container aside{
+                display: none;
+            }
+            
+        }
+      
+           
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">LOGO</a>
+        <nav>
+            <label for="dropnav"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="dropnav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallary</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <aside>
+            <ul>
+                <li>loram</li>
+                <li>lorea</li>
+                <li>kisuds</li>
+                <li>sdas</li>
+                <li>sdasd</li>
+            </ul>
+        </aside>
+        <main>
+            <section>
+                <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                </p>
+            </section>
+            <section>
+                <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                </p>
+            </section>
+            <section>
+                <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, neque earum cumque odio sed maxime magni consectetur quas labore reiciendis magnam! Ad culpa at quam iste voluptates nemo ut illo.
+                </p>
+            </section>
+        </main>
+    </div>
+    <footer>
+      welcome to our dummy website  &copy; 2019
+    </footer>
+</body>
+</html>

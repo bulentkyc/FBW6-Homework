@@ -1,0 +1,185 @@
+/*font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: url(./hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -300px;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+    font-size: calc(10px + (20 - 10) * ((100vw - 550px) / (1680 - 550)));
+}
+
+header,
+ul,
+main,
+article {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    font-family: 'Lato', sans-serif
+}
+
+li {
+    padding: 0 0 0 40px
+}
+
+a {
+    text-decoration: none;
+    color: rgba(201, 201, 223, 0.541);
+    letter-spacing: 1.5px;
+    font-size: calc(10px + (50 - 10) * ((100vw - 550px) / (1680 - 550)));
+    font-weight: 600;
+    transition: all 0.345ss ease
+}
+
+a:hover {
+    text-shadow: 0 0 15px wheat
+}
+
+main {
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto
+}
+
+.section {
+    width: 28%;
+    background-color: rgba(194, 128, 128, 0.397);
+    border-radius: 5px 50px 5px 5px;
+    margin-top: calc(20px + (300 - 20) * ((100vw - 550px) / (1680 - 550)))
+}
+
+p {
+    margin: o;
+    padding: 0;
+    letter-spacing: 0.5px;
+    display: block;
+    margin: 8px;
+
+}
+
+article {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: calc(20px + (60 - 20) * ((100vw - 550px) / (1680 - 550)));
+    margin-bottom: calc(20px + (100 - 20) * ((100vw - 550px) / (1680 - 550)));
+}
+
+.left {
+    width: 25%
+}
+
+.right {
+    width: 65%
+}
+
+.right {
+    background: url(./space.jpg) no-repeat;
+    background-position: bottom;
+    border-radius: 5px
+}
+
+footer {
+    text-align: center
+}
+
+@media only screen and (max-width: 750px) {
+
+    body {
+        background-position: top;
+        background-size: cover
+    }
+
+    li {
+        padding: 0 0 0 10px;
+
+    }
+
+    a {
+        font-size: calc(10px + (25 - 10) * ((100vw - 550px) / (1680 - 550)));
+        color: rgba(218, 218, 233, 0.89);
+    }
+
+    main {
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0
+    }
+
+    .section {
+        width: 30%;
+        background-color: rgba(194, 128, 128, 0.397);
+        border-radius: 5px 10px 5px 5px;
+        margin-top: calc(20px + (100 - 20) * ((100vw - 550px) / (1680 - 550)));
+        font-size: calc(11px + (15 - 11) * ((100vw - 550px) / (1680 - 550)))
+    }
+
+
+    article {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: calc(20px + (100 - 20) * ((100vw - 550px) / (1680 - 550)));
+        font-size: calc(10px + (20 - 10) * ((100vw - 550px) / (1680 - 550)))
+    }
+
+    .right {
+        width: 65%
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        background-position: center 100px;
+        background-size: 400%
+    }
+
+
+
+    li {
+        padding: 0 0 0 5px;
+
+    }
+
+    a {
+        font-size: calc(13px + (20 - 13) * ((100vw - 550px) / (1680 - 550)));
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0
+    }
+
+    .section {
+        width: 100%;
+        background-color: rgba(194, 128, 128, 0.397);
+        border-radius: 5px 10px 5px 5px;
+        margin-top: 60px;
+        font-size: calc(11px + (15 - 11) * ((100vw - 550px) / (1680 - 550)))
+    }
+
+
+    article {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        font-size: calc(10px + (15 - 10) * ((100vw - 550px) / (1680 - 550)))
+    }
+
+    .right {
+        width: 65%
+    }
+}

@@ -1,0 +1,61 @@
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotateY(0); }
+    100% { -webkit-transform: rotateY(360deg); }
+  }
+.button{
+    width: 200px; height: 200px;
+    margin-left: 30%;
+    margin-top: 120px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color:rgb(228, 210, 210);
+    position: relative;
+    -webkit-perspective: 1600px;
+    -webkit-perspective-origin: 50% -100px;
+}
+.cube{
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: rotate 10s infinite linear;
+    
+}
+
+.f{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    line-height: 300px;
+    display: block;
+    -webkit-transform-origin: 50% 50% 0;
+    opacity: 0.5;
+    transition: 3s;
+}
+.cube:hover .f{
+    width: 200px;
+    height: 200px;
+    
+}
+.front{
+    -webkit-transform: translateZ(150px);
+    background-color:black;
+}
+.back{
+    background-color:red;
+    -webkit-transform: rotateY(180deg) translateZ(150px);
+}
+.top{
+    -webkit-transform: rotateX(90deg) translateZ(150px); 
+    background-color:green;
+}
+.bottom{
+    -webkit-transform: rotateX(-90deg) translateZ(150px);
+    background-color:yellow;
+}
+.left{
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+    background-color:saddlebrown;
+}
+.right{
+    -webkit-transform: rotateY(90deg) translateZ(150px); 
+    background-color:violet;
+}

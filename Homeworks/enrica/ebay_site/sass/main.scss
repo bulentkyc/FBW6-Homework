@@ -1,0 +1,128 @@
+body{
+    color: #666;
+    font-family: "sans",Arial;
+    font-weight: 300;
+    max-width: 1280px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+a{
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+ul li{
+    list-style-type: none;
+}
+hr{
+   color: #9999;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  img{
+    width: 9vw;
+  }
+  form{
+    display: inline-block;
+    width: 100%;
+      button{
+      border: none;
+      line-height: 0;
+      background-color: transparent;
+      }
+      input[type=text]{
+      background: transparent;
+      line-height: 1.5;
+      padding: 10px 0 9px 8px;
+      box-shadow: none;
+      border: 1px solid #ddd;
+      width: 50%;
+      }
+      select{
+      border: 1px solid #ddd;
+      border-left-color: #efefef;
+      padding: 0 10px;
+      width: 200px;
+      height: 44px;
+      background: #fff;
+      border-radius: 0 3px 3px 0;
+      margin: 0;
+      }
+      input[type=submit]{
+      width: 90px;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 3px;
+      border: 0;
+      color: #fff;
+      text-decoration: none;
+      background: #00509d;
+      background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+      height: 42px;
+      }
+      a{
+      margin-left: 10px;
+      }
+  }
+}
+nav ol li{
+    display: inline-flex;
+    left: 0;
+}
+aside{
+    display: inline-block;
+    width: 17vw;
+        ul li{
+        padding: 4px;
+        }
+}
+
+main{
+    display: inline-flex;
+    flex-direction: column;
+    float: right;
+    max-width: 937px;
+    div{
+    display: inline-flex;
+    border: 0.5px solid #9999;
+    margin: 10px;
+      .first-con{
+      background-color: #659EFF;
+      color: #121258;
+      width: 30%;
+        h2{
+        font-size: 1.75rem;
+        font-weight: bold;
+        overflow: hidden;
+        padding: 3%;
+        }
+        P{
+        padding: 3%;
+        } 
+        a{
+        font-size: 1rem;
+        border-radius: 0;
+        border: 1px solid;
+        cursor: pointer;
+        padding: 8px;
+        margin-left: -10px;
+        }
+      }
+      figure{
+      margin: 0;
+      padding: 0;
+        img{
+            width: 34vw;
+          height: 35vh;
+          object-fit: cover;
+          margin-bottom: -5px;
+        }
+      }
+    }
+  }

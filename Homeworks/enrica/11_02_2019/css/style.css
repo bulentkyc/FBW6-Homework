@@ -1,0 +1,365 @@
+
+ 
+section{
+width: 620px;
+height: 620px;
+background-color: #999;
+left: 0;
+right: 0;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+}
+header{
+display: flex;
+width: 100%;
+justify-content: space-evenly;
+align-items: center;
+height: 33%;
+}
+header div, footer div, div{
+	border: 2px solid black;
+	display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+div.left-top{
+	background-color: red;
+  width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	
+}
+div.right-top{
+	background-color: green;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+}
+div.left-bottom{
+  background-color: blue;	
+	width: 160px;
+	height: 160px;
+  border-radius: 50%;
+	
+}
+div.right-bottom{
+	background-color: yellow;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+}
+div.green{
+	width: 24px;
+	height: 128px;
+	background-color: green;
+	border-radius: 25px;
+	margin-top: 21px;
+}
+div.red{
+	width: 128px;
+	height: 24px;
+	background-color: red;
+	border-radius: 25px;
+	margin-right: 47px;
+}
+div.yellow{
+	width: 128px;
+	height: 26px;
+	background-color: yellow;
+	border-radius: 25px;
+	margin-left: 47px;
+}
+div.blu{
+	width: 24px;
+	height: 128px;
+	background-color: blue;
+	border-radius: 25px;
+	margin-bottom: 21px;
+}
+div>span{
+	margin: 3%;
+}
+span{
+width: 40px;
+height: 40px;
+border: 2px solid black;
+border-radius: 50%;
+background-color: white;
+}
+main{
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+    flex-flow: wrap;
+	height: 10%;
+}
+footer{
+	display: flex;
+	width:100%;
+	justify-content: space-evenly;
+	align-content: center;
+	height: 30%;
+}
+.around{
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between;
+}
+.top{
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+}
+.bottom{
+	display: flex;
+	flex-direction: column; 
+	justify-items: inherit;
+	align-items: center;
+}
+section.middle{
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	height: 10%;
+	align-items: center;
+}
+.lateral-sx-top{
+	flex-direction: initial;
+	display: flex;
+	width: 50%;
+	justify-content: space-evenly;
+}
+.lateral-sx-bottom{
+	flex-direction: initial;
+	display: flex;
+	width: 50%;
+	justify-content: space-evenly;
+}
+.lateral-dx-top{
+	display: flex;
+	flex-direction: row-reverse;
+	width: 50%;
+	justify-content: space-evenly;
+}
+.lateral-dx-bottom{
+	display: flex;
+	flex-direction: row-reverse;
+	width: 50%;
+  justify-content: space-evenly;
+}
+main span{
+	
+	margin: -45px;
+}
+aside span{
+	margin: 0;
+}
+.lateral-sx-top span div,.lateral-dx-top span div,.lateral-sx-bottom span div,.lateral-dx-bottom span div, span div.horizontal-line{
+	position: relative;
+  left: 39px;
+  top: 42%;
+	height: 4px;
+	background-color: white;
+	width: 30px;
+} 
+.lateral-dx-top span div.vertical-line,.lateral-sx-top span div.vertical-line,.around div{
+	position: relative;
+  left: 15px;
+  top: 86%;
+	height: 33px;
+	background-color: white;
+	width: 4px;
+}
+main span div{
+	position: relative;
+  left: 15px;
+  top: 100%;
+	height: 29px;
+	background-color: white;
+	width: 4px;
+}
+/* animation */
+.page{
+	position: relative;
+	background: url('https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
+		background-size: cover;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		padding-top: 150px;
+		-webkit-box-pack: center;
+				-ms-flex-pack: center;
+						justify-content: center;
+		-webkit-perspective-origin: 50% 50%;
+						perspective-origin: 50% 50%;
+		-webkit-perspective: 1000px;
+						perspective: 1000px;
+		overflow: hidden;
+}
+
+.page::before{
+content: '';
+width: 250%;
+height: 250%;
+top: -10%;
+left: -10%;
+position: absolute;
+background: url('https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
+background-size:cover;
+-webkit-filter: blur(10px) brightness(.7);
+				filter: blur(10px) brightness(.7);
+z-index: -1;
+}
+
+/* ============================= dots here ============================ */
+.dot{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: black;
+-webkit-box-shadow: 0 0 5px 2.5px rgba(0,0,0,0.5);
+			box-shadow: 0 0 5px 2.5px rgba(0,0,0,0.5);
+}
+
+/* === 1 === */
+.face-one .dot,
+.face-three .dot:nth-child(2),
+.face-five .dot:nth-child(5){
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+}
+/* === 2 === */
+.face-two .dot:nth-child(1),
+.face-three .dot:nth-child(1),
+.face-four .dot:nth-child(1),
+.face-five .dot:nth-child(1),
+.face-six .dot:nth-child(1){
+position: absolute;
+top: 20%;
+left: 20%;
+-webkit-transform: translate(-20%,-20%);
+	-ms-transform: translate(-20%,-20%);
+			transform: translate(-20%,-20%);
+}
+.face-two .dot:nth-child(2),
+.face-three .dot:nth-child(3),
+.face-four .dot:nth-child(4),
+.face-five .dot:nth-child(4),
+.face-six .dot:nth-child(6){
+position: absolute;
+top: 80%;
+left: 80%;
+-webkit-transform: translate(-80%,-80%);
+	-ms-transform: translate(-80%,-80%);
+			transform: translate(-80%,-80%);
+}
+/* === 3 === */
+
+/* === 4 === */
+.face-four .dot:nth-child(2),
+.face-five .dot:nth-child(2),
+.face-six .dot:nth-child(3){
+position: absolute;
+top: 20%;
+left: 80%;
+-webkit-transform: translate(-80%,-20%);
+	-ms-transform: translate(-80%,-20%);
+			transform: translate(-80%,-20%);
+}
+.face-four .dot:nth-child(3),
+.face-five .dot:nth-child(3),
+.face-six .dot:nth-child(4){
+position: absolute;
+top: 80%;
+left: 20%;
+-webkit-transform: translate(-20%,-80%);
+	-ms-transform: translate(-20%,-80%);
+			transform: translate(-20%,-80%);
+}
+/* === 5 === */
+
+/* === 6 === */
+.face-six .dot:nth-child(2){
+position: absolute;
+top: 20%;
+left: 50%;
+-webkit-transform: translate(-50%,-20%);
+	-ms-transform: translate(-50%,-20%);
+			transform: translate(-50%,-20%);
+}
+.face-six .dot:nth-child(5){
+position: absolute;
+top: 80%;
+left: 50%;
+-webkit-transform: translate(-50%,-80%);
+	-ms-transform: translate(-50%,-80%);
+			transform: translate(-50%,-80%);
+}
+/* ============================= end dots ============================ */
+
+/* ============================= dice here ============================ */
+.dice {
+margin: auto;
+width: 200px;
+height: 200px;
+-webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+				transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+-webkit-animation: rotation 10s linear infinite;
+				animation: rotation 10s linear infinite;
+}
+@-webkit-keyframes rotation {
+0% { -webkit-transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); }
+50% { -webkit-transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); }
+100% { -webkit-transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); }
+
+}
+@keyframes rotation {
+0% { -webkit-transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); transform: rotateY(0deg) rotateX(-180deg) rotateZ(-140deg); }
+50% { -webkit-transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); transform: rotateY(360deg) rotateX(-360deg) rotateZ(00deg); }
+100% { -webkit-transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); transform: rotateY(360deg) rotateX(180deg) rotateZ(220deg); }
+
+}
+.face {
+background: white;
+border: 7px solid rgba(0, 0, 0, 0.8);
+border-radius: 10px;
+width: 200px;
+height: 200px;
+position: absolute;
+-webkit-box-shadow: 0 0 50px 1px white;
+				box-shadow: 0 0 50px 1px white;
+}
+.face-one{
+-webkit-transform: translateZ(100px);
+				transform: translateZ(100px);
+}
+.face-two{
+-webkit-transform: rotateY(180deg) translateZ(100px);
+				transform: rotateY(180deg) translateZ(100px);
+}
+.face-three{
+-webkit-transform: rotateY(-90deg) translateZ(100px);
+				transform: rotateY(-90deg) translateZ(100px);
+}
+.face-four{
+-webkit-transform: rotateY(90deg) translateZ(100px);
+				transform: rotateY(90deg) translateZ(100px);
+}
+.face-five{
+-webkit-transform: rotateX(90deg) translateZ(100px);
+				transform: rotateX(90deg) translateZ(100px);
+}
+.face-six{
+-webkit-transform: rotateX(-90deg) translateZ(100px);
+				transform: rotateX(-90deg) translateZ(100px);
+}

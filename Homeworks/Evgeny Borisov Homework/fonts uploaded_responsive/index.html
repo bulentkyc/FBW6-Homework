@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonts uploaded - responsive</title>
+    <style>
+        @font-face {
+            font-family: "Headlinerno.45";
+            src: url("HeadlinerNo.45 DEMO.ttf")
+        }
+
+        .scene {
+            background-image: url(/media/wp1234.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 70vh;
+            width: 70vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 80px solid rgba(0, 255, 0, 0.233);
+            border-image: repeating-linear-gradient(45deg,
+                rgb(200, 133, 8), rgb(8, 133, 200)1.5%,
+                transparent 2%, transparent 3%) 250;
+            box-sizing: border-box;
+            background-origin: border-box
+        }
+
+        .text {
+            text-transform: uppercase;
+            font-size: calc(20px + (46 - 20) * ((100vw - 550px) / (1600 - 550)));
+            color: whitesmoke;
+            font-family: "Headlinerno.45";
+            letter-spacing: 2px;
+            transform: translateY(-150%)
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="scene">
+        <div class="text">This font was upload for the personal use!</div>
+    </div>
+</body>
+
+</html>

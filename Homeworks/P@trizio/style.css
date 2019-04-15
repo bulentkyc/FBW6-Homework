@@ -1,0 +1,139 @@
+.container{
+    background-color: #E0E4DC;
+    width: 75%;
+    align-content: center;
+    border:solid 35px #DBBC9A;
+    margin-left: 10%;
+
+
+}
+.circle{
+    width:55px;
+    height: 55px;
+    border-radius: 50%;
+    border:solid 2px grey;
+}
+
+.little-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:solid 2px grey;
+    background-color: #E0E4DC;
+}
+
+table{
+    z-index: 1;
+    /* border:solid 2px grey; */
+    margin-left: 15%;
+}
+
+.circle-red{    
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    z-index: 0;
+    margin-left:18%;
+    margin-top:5%;
+    border-radius: 50%;
+}
+
+/* .circle-red div:nth-of-type(3), div:nth-of-type(4){
+    background-color: black;
+    align-self: stretch;
+} */
+
+.circle-green{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    z-index: 0;
+    margin-left:42%;
+    margin-top:5%;
+    border-radius: 50%;
+}
+
+.circle-yellow{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    z-index: 0;
+    margin-left:18%;
+    margin-top:29%;
+    border-radius: 50%;
+}
+
+.circle-blue{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    z-index: 0;
+    margin-left:42%;
+    margin-top:29%;
+    border-radius: 50%;
+}
+
+#line-red{
+    position:absolute;
+    z-index: 1;
+    width: 200px;;
+    height: 45px;
+    background-color: red;
+    margin-left:18%;
+    margin-top:-23.5%;
+    border-radius: 15px;
+}
+
+#line-yellow{
+    position:absolute;
+    z-index:4;
+    width: 200px;;
+    height: 45px;
+    background-color: yellow;
+    margin-left:38.5%;
+    margin-top:-23.5%;
+    border-radius: 15px;    
+    
+}
+
+#line-blue{
+    position:absolute;
+    z-index:1;
+    width:45px;
+    height: 200px;
+    background-color: blue;
+    margin-left:33.4%;
+    margin-top:-19%;
+    border-radius: 15px;
+}
+
+#line-green{
+    position:absolute;
+    z-index: 2;
+    width:45px;
+    height: 200px;
+    background-color: green;
+    margin-left:33.4%;
+    margin-top:-38.5%;
+    border-radius: 15px;
+}
